@@ -39,18 +39,26 @@ class _CandidateTrackRowState extends State<CandidateTrackRow> {
   @override
   void initState() {
     super.initState();
-    if (widget.selected) WidgetsBinding.instance.addPostFrameCallback((_) => _sync());
+    if (widget.selected) _scheduleSync();
   }
 
   @override
   void didUpdateWidget(CandidateTrackRow old) {
     super.didUpdateWidget(old);
-    if (old.selected != widget.selected) _sync();
+    if (old.selected != widget.selected) _scheduleSync();
   }
+
+  /// OverlayPortal no permite show/hide durante el build (didUpdateWidget
+  /// corre dentro del rebuild del ListView), así que se aplaza al fin del frame.
+  void _scheduleSync() => WidgetsBinding.instance.addPostFrameCallback((_) => _sync());
 
   void _sync() {
     if (!mounted) return;
-    widget.selected ? _popover.show() : _popover.hide();
+    if (widget.selected && !_popover.isShowing) {
+      _popover.show();
+    } else if (!widget.selected && _popover.isShowing) {
+      _popover.hide();
+    }
   }
 
   @override

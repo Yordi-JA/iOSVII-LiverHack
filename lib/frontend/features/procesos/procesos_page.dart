@@ -126,6 +126,11 @@ class _ProcesosView extends ConsumerWidget {
                       : ListView.separated(
                           padding: const EdgeInsets.only(top: 12, bottom: 12),
                           itemCount: visible.length,
+                          // Al reordenar/filtrar, cada fila conserva su estado (y su popup) siguiendo su key.
+                          findItemIndexCallback: (key) {
+                            final i = visible.indexWhere((c) => ValueKey(c.id) == key);
+                            return i == -1 ? null : i;
+                          },
                           separatorBuilder: (_, _) => Divider(height: 1, color: Colors.white.withValues(alpha: 0.7)),
                           itemBuilder: (context, i) {
                             final c = visible[i];
