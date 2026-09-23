@@ -17,27 +17,28 @@ La demo usa datos locales (`MockTalentRepository`), no necesita Firebase para ve
 ```
 lib/
 ├── main.dart                     Punto de entrada (ProviderScope)
-├── app/
-│   ├── app.dart                  MaterialApp.router + tema
-│   └── router.dart               Rutas (go_router) dentro del AppShell
-├── core/                         Código compartido, sin lógica de negocio
-│   ├── theme/                    Colores Liverpool, tipografía estilo Apple, ThemeData
-│   ├── widgets/                  GlassCard, LiquidBackground, GradientAvatar, StatusPill...
-│   ├── layout/                   AppShell, SideNav, TopBar
-│   └── utils/                    Formateo de dinero e iniciales
-├── data/                         Capa de datos
+├── backend/                      Capa de datos
 │   ├── models/                   Candidate, Vacancy, AppAlert, Person, PipelineStage
 │   ├── repositories/             TalentRepository (interfaz) + Mock + Firestore
 │   ├── seed/                     10 candidatos, 4 vacantes, alertas, directorio + seeder
 │   └── providers.dart            Providers de Riverpod
-└── features/                     Un módulo por pantalla
-    ├── dashboard/                Dashboard de RH (métricas + tarjetas)
-    ├── procesos/                 Flujo de 6 pasos + carril por postulante + popup
-    ├── candidate_profile/        Perfil del postulante por secciones (proceso, perfil,
-    │                             evaluación, compensación, contacto)
-    ├── comparativa/              Top 10 por potencial HCAI + comparativa lado a lado
-    ├── session/                  Rol activo (Reclutador / HM / HRBP)
-    └── shared/                   Páginas de módulos en construcción
+└── frontend/                     Interfaz
+    ├── app/
+    │   ├── app.dart              MaterialApp.router + tema
+    │   └── router.dart           Rutas (go_router) dentro del AppShell
+    ├── core/                     Código compartido, sin lógica de negocio
+    │   ├── theme/                Colores Liverpool, tipografía estilo Apple, ThemeData
+    │   ├── widgets/              GlassCard, LiquidBackground, GradientAvatar, StatusPill...
+    │   ├── layout/               AppShell, SideNav, TopBar
+    │   └── utils/                Formateo de dinero e iniciales
+    └── features/                 Un módulo por pantalla
+        ├── dashboard/            Dashboard de RH (métricas + tarjetas)
+        ├── procesos/             Flujo de 6 pasos + carril por postulante + popup
+        ├── candidate_profile/    Perfil del postulante por secciones (proceso, perfil,
+        │                         evaluación, compensación, contacto)
+        ├── comparativa/          Top 10 por potencial HCAI + comparativa lado a lado
+        ├── session/              Rol activo (Reclutador / HM / HRBP)
+        └── shared/               Páginas de módulos en construcción
 ```
 
 - **Frontend:** Flutter (web) con Riverpod para estado y go_router para navegación.
