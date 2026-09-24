@@ -13,7 +13,7 @@ const _formula =
     'Puntaje de 0 a 100:\n'
     '40 % cumplimiento de SLA\n'
     '25 % aceptación de oferta\n'
-    '20 % satisfacción del Hiring Manager (÷ 5)\n'
+    '20 % satisfacción del HM (÷ 5)\n'
     '15 % vacantes cubiertas (÷ máximo del equipo)';
 
 /// Fotos del equipo que ya existen en assets/fotos.
@@ -35,7 +35,7 @@ class RecruiterRankingCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CardHeader(
-            title: 'Desempeño de reclutadores',
+            title: 'Desempeño del equipo de AT',
             subtitle: periodo.label,
             trailing: const Tooltip(
               message: _formula,
@@ -89,7 +89,7 @@ class RecruiterRankingCard extends StatelessWidget {
             const SizedBox(height: 16),
           ],
           const _Fila(
-            celdas: ['Reclutador', 'Cubiertas', 'Días prom.', 'En SLA', 'Aceptación', 'Sat. HM', 'Puntaje'],
+            celdas: ['AT', 'Cubiertas', 'Días prom.', 'En SLA', 'Aceptación', 'Sat. HM', 'Puntaje'],
             encabezado: true,
           ),
           for (final d in ranking)

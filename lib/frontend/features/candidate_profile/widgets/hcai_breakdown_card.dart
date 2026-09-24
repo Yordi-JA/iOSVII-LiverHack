@@ -56,7 +56,7 @@ class HcaiBreakdownCard extends StatelessWidget {
               ),
             ),
           Text(
-            'La IA sugiere; la decisión final es del Hiring Manager.',
+            'La IA sugiere; la decisión final es del HM.',
             style: AppTypography.caption.copyWith(fontStyle: FontStyle.italic),
           ),
         ],

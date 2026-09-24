@@ -61,7 +61,7 @@ class _TareaCompletada extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'Esta etapa fue gestionada y aprobada por el HRBP y el Hiring Manager.',
+                'Esta etapa fue gestionada y aprobada por el HRBP y el HM.',
                 style: AppTypography.body.copyWith(color: AppColors.inkSoft),
                 textAlign: TextAlign.center,
               ),

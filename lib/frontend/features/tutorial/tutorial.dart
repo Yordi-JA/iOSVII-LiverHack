@@ -13,7 +13,7 @@ const pasosTutorial = <PasoTutorial>[
     target: 'rol',
     titulo: 'Cambia de rol',
     texto:
-        'La demo simula tres perfiles: Reclutador, Hiring manager y HRBP. Cada uno ve información y '
+        'La demo simula tres perfiles: AT, HM y HRBP. Cada uno ve información y '
         'acciones distintas. Cámbialo cuando quieras para recorrer el proceso completo.',
   ),
   (
@@ -35,7 +35,7 @@ const pasosTutorial = <PasoTutorial>[
     titulo: 'Dashboard del área',
     texto:
         'Vacantes cubiertas contra la meta, tardías, desempeño del equipo y tus pendientes del día. '
-        'Solo lo ve Reclutamiento.',
+        'Solo lo ve AT.',
   ),
   (
     target: 'flujo',

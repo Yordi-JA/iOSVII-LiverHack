@@ -34,7 +34,7 @@ void main() {
     return container;
   }
 
-  testWidgets('Reclutador: el dashboard abre desde el menú con los indicadores de la demo', (tester) async {
+  testWidgets('AT: el dashboard abre desde el menú con los indicadores de la demo', (tester) async {
     final c = await pumpApp(tester);
 
     await tester.tap(find.text('Dashboard'));
@@ -84,7 +84,7 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('Solo el Reclutador ve el dashboard', (tester) async {
+  testWidgets('Solo el AT ve el dashboard', (tester) async {
     final c = await pumpApp(tester);
     await tester.tap(find.text('Dashboard'));
     await settle(tester);

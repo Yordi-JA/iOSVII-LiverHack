@@ -35,7 +35,7 @@ void main() {
     return container;
   }
 
-  testWidgets('Reclutador: lista, alertas, límite de comparación y envío al HM', (tester) async {
+  testWidgets('AT: lista, alertas, límite de comparación y envío al HM', (tester) async {
     final container = await pumpPage(tester);
     final notifier = container.read(candidatosProvider.notifier);
 
@@ -141,7 +141,7 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('Hiring manager: solo ve enviados, sin compensación actual, y decide con justificación', (tester) async {
+  testWidgets('HM: solo ve enviados, sin compensación actual, y decide con justificación', (tester) async {
     final container = await pumpPage(tester);
     container.read(currentRoleProvider.notifier).select(UserRole.hiringManager);
     await settle(tester);
@@ -156,7 +156,7 @@ void main() {
 
     container.read(candidatosProvider.notifier).toggleOpen(1);
     await settle(tester);
-    expect(find.text('Decisión del Hiring manager'), findsOneWidget);
+    expect(find.text('Decisión del HM'), findsOneWidget);
 
     final finalistaButton = find.text('Marcar finalista');
     await tester.ensureVisible(campoDecision);

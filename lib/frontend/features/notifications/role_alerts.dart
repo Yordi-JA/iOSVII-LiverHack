@@ -89,7 +89,7 @@ final roleAlertsProvider = Provider<List<RoleAlert>>((ref) {
           icon: Icons.schedule,
           color: AppColors.warning,
           title: '$n candidato$plural ${n == 1 ? 'lleva' : 'llevan'} 3 días o más sin veredicto del HM.',
-          body: 'Se envió un recordatorio automático a los Hiring managers.',
+          body: 'Se envió un recordatorio automático a los HM.',
           candidato: enAlerta.first,
         ),
     ],

@@ -61,7 +61,7 @@ void main() {
     // "Recarga".
     final r = await app().read(candidatosProvider.future);
     expect(r.eventos, hasLength(4));
-    expect(r.eventosDe('VAC-101', 5).last.actor, 'Hiring manager');
+    expect(r.eventosDe('VAC-101', 5).last.actor, 'HM');
   });
 
   test('las instantáneas muestran el presupuesto previo a la negociación y solo se visitan etapas pasadas', () async {
@@ -138,7 +138,7 @@ void main() {
     await tester.tap(find.text('Atracción'));
     await settle(tester);
     expect(find.text('Solo lectura'), findsOneWidget);
-    expect(find.text('Con Hiring manager'), findsNothing); // sin recuadros de conteo
+    expect(find.text('Con HM'), findsNothing); // sin recuadros de conteo
     expect(find.textContaining('Mover seleccionados'), findsNothing);
     expect(tester.widgetList<Checkbox>(find.byType(Checkbox)).every((cb) => cb.onChanged == null), isTrue);
     expect(find.text('Sin entrevistas'), findsNWidgets(5));
@@ -260,7 +260,7 @@ void main() {
     ));
     await settle(tester);
     final n = c.read(candidatosProvider.notifier);
-    const tareaCompletada = 'Esta etapa fue gestionada y aprobada por el HRBP y el Hiring Manager.';
+    const tareaCompletada = 'Esta etapa fue gestionada y aprobada por el HRBP y el HM.';
 
     // Reclutador en la Requisición de VAC-101 (etapa 5): sin presupuesto ni SLA.
     n.verEtapa(1);

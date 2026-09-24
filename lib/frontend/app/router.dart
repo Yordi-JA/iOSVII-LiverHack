@@ -34,7 +34,7 @@ final appRouter = GoRouter(
           path: '/entrevistas',
           pageBuilder: (_, _) => _page(const ComingSoonPage(
             title: 'Entrevistas',
-            description: 'Agenda, feedback en vivo a ciegas y decisión del Hiring Manager.',
+            description: 'Agenda, feedback en vivo a ciegas y decisión del HM.',
             icon: Icons.forum_outlined,
           )),
         ),
@@ -42,7 +42,7 @@ final appRouter = GoRouter(
           path: '/directorio',
           pageBuilder: (_, _) => _page(const ComingSoonPage(
             title: 'Directorio',
-            description: 'Reclutadores, Hiring Managers y HRBPs con sus vacantes.',
+            description: 'AT, HM y HRBPs con sus vacantes.',
             icon: Icons.badge_outlined,
           )),
         ),

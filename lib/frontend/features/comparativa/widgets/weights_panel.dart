@@ -73,7 +73,7 @@ class HcaiPrinciplesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     const principles = [
       (Icons.lightbulb_outline_rounded, 'Explicable', 'Cada puntaje muestra qué factores lo forman.'),
-      (Icons.person_outline_rounded, 'La persona decide', 'La IA sugiere; la decisión final es del Hiring Manager.'),
+      (Icons.person_outline_rounded, 'La persona decide', 'La IA sugiere; la decisión final es del HM.'),
       (Icons.shield_outlined, 'Sin sesgos', 'Nunca usa datos sensibles para calificar.'),
       (Icons.history_rounded, 'Auditable', 'Pesos y decisiones quedan en la bitácora.'),
     ];

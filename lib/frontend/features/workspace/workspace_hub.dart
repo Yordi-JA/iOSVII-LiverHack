@@ -353,8 +353,8 @@ class _MeetSheet extends StatelessWidget {
     final code = _code;
     final participantes = [
       (candidato.nombre, 'Candidato', GColors.meetGreen),
-      (vacante.hiringManager, 'Hiring manager', GColors.blue),
-      (vacante.reclutador, 'Reclutamiento', GColors.red),
+      (vacante.hiringManager, 'HM', GColors.blue),
+      (vacante.reclutador, 'AT', GColors.red),
     ];
 
     void done(String message, IconData icon) {

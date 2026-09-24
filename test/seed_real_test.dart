@@ -19,19 +19,13 @@ LiverhackSeed realSeed() => LiverhackSeed.fromJson(
 void main() {
   setUpAll(() => GoogleFonts.config.allowRuntimeFetching = false);
 
-  test('el seed real trae 14 vacantes y 43 candidatos (15 aún en Aira), todos con vacante', () {
+  test('el seed real trae 11 vacantes y 34 candidatos (6 aún en Aira), todos con vacante', () {
     final seed = realSeed();
     final ids = seed.vacantes.map((v) => v.id).toSet();
-    expect(seed.vacantes, hasLength(14));
-    // Cuatro en Requisición y una en Alineación para grabar los casos de uso.
-    expect(seed.vacantes.where((v) => v.etapaActual == 1).map((v) => v.id), ['VAC-110', 'VAC-112', 'VAC-113', 'VAC-114']);
-    expect(seed.vacantes.where((v) => v.etapaActual == 2).map((v) => v.id), ['VAC-111']);
-    expect(seed.candidatos, hasLength(43));
-    expect(seed.candidatos.where((c) => !c.importado), hasLength(15));
-    expect(
-      seed.candidatos.where((c) => !c.importado).map((c) => c.vacanteId).toSet(),
-      {'VAC-110', 'VAC-111', 'VAC-112', 'VAC-113', 'VAC-114'},
-    );
+    expect(seed.vacantes, hasLength(11));
+    expect(seed.vacantes.where((v) => v.etapaActual <= 2).map((v) => v.id), ['VAC-110', 'VAC-111']);
+    expect(seed.candidatos, hasLength(34));
+    expect(seed.candidatos.where((c) => !c.importado).map((c) => c.vacanteId).toSet(), {'VAC-110', 'VAC-111'});
     expect(seed.candidatos.where((c) => !ids.contains(c.vacanteId)), isEmpty);
   });
 

@@ -83,7 +83,7 @@ class StageGate extends StatelessWidget {
         icon: Icons.handshake_outlined,
         title: 'Esperando la alineación de ${v.hiringManager}',
         body:
-            'El Hiring manager debe aprobar el perfil buscado. El SLA de la búsqueda arranca en cuanto lo haga '
+            'El HM debe aprobar el perfil buscado. El SLA de la búsqueda arranca en cuanto lo haga '
             'y los candidatos se habilitan a partir de esa etapa.',
       ),
     };
@@ -132,8 +132,8 @@ class _RequisicionCard extends ConsumerWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   _LineaDirectorio(icon: Icons.business, etiqueta: 'Área', valor: v.area),
-                  _LineaDirectorio(icon: Icons.person_outline, etiqueta: 'Hiring manager', valor: v.hiringManager),
-                  _LineaDirectorio(icon: Icons.person_outline, etiqueta: 'Reclutamiento', valor: v.reclutador),
+                  _LineaDirectorio(icon: Icons.person_outline, etiqueta: 'HM', valor: v.hiringManager),
+                  _LineaDirectorio(icon: Icons.person_outline, etiqueta: 'AT', valor: v.reclutador),
                 ],
               );
               return box.maxWidth >= 1040
@@ -197,8 +197,8 @@ class _AlineacionCard extends ConsumerWidget {
           PanelTitle(
             'Alineación del perfil',
             hint: cierre == null
-                ? 'Revisa el perfil que buscará Reclutamiento. Al aprobarlo arranca oficialmente el SLA de la búsqueda.'
-                : 'Perfil que el Hiring manager aprobó para la búsqueda.',
+                ? 'Revisa el perfil que buscará AT. Al aprobarlo arranca oficialmente el SLA de la búsqueda.'
+                : 'Perfil que el HM aprobó para la búsqueda.',
             trailing: Padding(
               padding: const EdgeInsets.only(left: 12),
               child: cierre != null
@@ -405,7 +405,7 @@ class _EditarPerfilDialogState extends State<_EditarPerfilDialog> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                'Ajusta lo que negociaste con Reclutamiento. Los cambios se guardan en la vacante antes de aprobar la alineación.',
+                'Ajusta lo que negociaste con AT. Los cambios se guardan en la vacante antes de aprobar la alineación.',
                 style: AppTypography.body.copyWith(color: AppColors.inkSoft),
               ),
               const SizedBox(height: 18),
@@ -476,7 +476,7 @@ class _BusquedaCardState extends ConsumerState<_BusquedaCard> {
         children: [
           const PanelTitle(
             'Búsqueda: importa candidatos',
-            hint: 'El perfil ya está alineado con el Hiring manager. Trae desde el ATS los candidatos que lo cumplen.',
+            hint: 'El perfil ya está alineado con el HM. Trae desde el ATS los candidatos que lo cumplen.',
           ),
           const SizedBox(height: 18),
           SoftBox(

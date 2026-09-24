@@ -21,11 +21,11 @@ void main() {
     final repo = FirestoreEntrevistasRepository(db);
 
     expect(await repo.watchNotas(7).first, '');
-    await repo.actualizarNotas(7, 'Buena comunicación.', autor: 'Hiring manager');
+    await repo.actualizarNotas(7, 'Buena comunicación.', autor: 'HM');
 
     final doc = await db.collection('entrevistas').doc('candidato_7').get();
     expect(doc.data()!['notas'], 'Buena comunicación.');
-    expect(doc.data()!['autor'], 'Hiring manager');
+    expect(doc.data()!['autor'], 'HM');
     expect(doc.data()!['candidato_id'], 7);
     expect(await repo.watchNotas(7).first, 'Buena comunicación.');
   });

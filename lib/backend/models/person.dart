@@ -1,6 +1,6 @@
 enum UserRole {
-  reclutador('Reclutador'),
-  hiringManager('Hiring manager'),
+  reclutador('AT'),
+  hiringManager('HM'),
   hrbp('HRBP'),
   entrevistador('Entrevistador');
 

@@ -108,7 +108,7 @@ class _CollaborativeCanvasState extends ConsumerState<CollaborativeCanvas> {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      'Reclutamiento y el Hiring manager escriben aquí al mismo tiempo.',
+                      'AT y el HM escriben aquí al mismo tiempo.',
                       style: AppTypography.caption,
                     ),
                   ],

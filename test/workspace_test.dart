@@ -140,7 +140,7 @@ void main() {
 
     await tester.tap(find.byTooltip('Cambiar de rol'));
     await settle(tester);
-    expect(find.text('Hiring manager'), findsOneWidget);
+    expect(find.text('HM'), findsOneWidget);
     await tester.tap(find.text('HRBP').last);
     await settle(tester);
     expect(c.read(currentRoleProvider), UserRole.hrbp);

@@ -59,7 +59,7 @@ class CandidateListPanel extends ConsumerWidget {
               child: Text(
                 soloLectura
                     ? 'En esta etapa no había candidatos visibles para tu rol.'
-                    : 'Aún no hay candidatos enviados a ti en esta vacante. Cuando Reclutamiento te envíe perfiles, aparecerán aquí.',
+                    : 'Aún no hay candidatos enviados a ti en esta vacante. Cuando AT te envíe perfiles, aparecerán aquí.',
                 style: AppTypography.body.copyWith(color: AppColors.inkMuted),
               ),
             )
@@ -374,7 +374,7 @@ class _Estatus extends StatelessWidget {
       Candidato(status: StatusProceso.finalista) => ('Finalista', AppColors.success),
       Candidato(status: StatusProceso.oferta) => ('En oferta', AppColors.flowDone),
       Candidato(status: StatusProceso.descartado) => ('Descartado', AppColors.inkMuted),
-      Candidato(enviadoHm: true) => ('Con Hiring manager', AppColors.flowCurrent),
+      Candidato(enviadoHm: true) => ('Con HM', AppColors.flowCurrent),
       _ => ('Filtro de reclutamiento', AppColors.info),
     };
     return Row(

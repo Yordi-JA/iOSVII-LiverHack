@@ -155,7 +155,7 @@ class CandidateDetail extends ConsumerWidget {
         ],
         if (puedeDecidir(role) && soloLectura == null) ...[
           const SizedBox(height: 18),
-          heading('Decisión del Hiring manager'),
+          heading('Decisión del HM'),
           if (estado != null && puedeSeleccionarParaOferta(estado, c, role)) ...[
             if (c.status == StatusProceso.finalista)
               SiguientePasoOferta(candidato: c, descartables: descartablesPara(estado, c))

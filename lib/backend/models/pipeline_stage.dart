@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /// Las 6 etapas del flujo y acuerdo de servicios.
 enum PipelineStage {
   requisicion('Requisición', 'Solicitud del HRBP', Icons.assignment_outlined),
-  alineacion('Alineación', 'AT y Hiring Manager', Icons.handshake_outlined),
+  alineacion('Alineación', 'AT y HM', Icons.handshake_outlined),
   busqueda('Búsqueda', 'Atracción de talento', Icons.travel_explore_outlined),
   atraccion('Atracción', 'Filtro de reclutamiento', Icons.filter_alt_outlined),
   seleccion('Selección', 'Entrevistas con HM', Icons.how_to_reg_outlined),

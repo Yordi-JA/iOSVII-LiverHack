@@ -92,7 +92,7 @@ class EstatusPill extends StatelessWidget {
     Candidato(status: StatusProceso.finalista) => const StatusPill(label: 'Finalista', color: AppColors.success),
     Candidato(status: StatusProceso.oferta) => const StatusPill(label: 'En oferta', color: AppColors.flowDone),
     Candidato(status: StatusProceso.descartado) => const MutePill(label: 'Descartado'),
-    Candidato(enviadoHm: true) => const StatusPill(label: 'Con Hiring manager', color: AppColors.magenta),
+    Candidato(enviadoHm: true) => const StatusPill(label: 'Con HM', color: AppColors.magenta),
     _ => const StatusPill(label: 'Filtro de reclutamiento', color: AppColors.info),
   };
 }

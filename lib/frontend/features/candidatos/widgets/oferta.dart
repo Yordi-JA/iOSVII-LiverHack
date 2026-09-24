@@ -237,8 +237,8 @@ class OfertaCard extends ConsumerWidget {
             PanelTitle(
               'Oferta final',
               hint: aprobada
-                  ? 'El HRBP aprobó el paquete. Reclutamiento confirma la aceptación con el candidato.'
-                  : 'El Hiring manager eligió al candidato. Falta que el HRBP apruebe el paquete de compensación.',
+                  ? 'El HRBP aprobó el paquete. AT confirma la aceptación con el candidato.'
+                  : 'El HM eligió al candidato. Falta que el HRBP apruebe el paquete de compensación.',
               trailing: Padding(
                 padding: const EdgeInsets.only(left: 12),
                 child: StatusPill(
