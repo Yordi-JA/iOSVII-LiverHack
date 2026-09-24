@@ -1,0 +1,1928 @@
+{
+  "_nota": "Seed data LiverHack 26. Las fechas son relativas a hoy (dias_desde_hoy negativo = días atrás) para que las alertas de SLA siempre se vean en el demo. dias_esperando_hm = días que el candidato lleva enviado al HM sin veredicto final.",
+  "sla": {
+    "duracion_base_dias": {
+      "Requisición": 1,
+      "Alineación": 2,
+      "Búsqueda": 9,
+      "Atracción": 17,
+      "Selección": 8,
+      "Oferta": 10
+    },
+    "multiplicador_complejidad": {
+      "Bajo": 0.75,
+      "Medio": 1,
+      "Alto": 1.25,
+      "Complejo": 1.5
+    },
+    "alerta_hm_dias": {
+      "ambar": 3,
+      "rojo": 5
+    }
+  },
+  "vacantes": [
+    {
+      "id": "VAC-101",
+      "titulo": "Gerente de Proyectos E-commerce",
+      "area": "Canales Digitales",
+      "complejidad": "Alto",
+      "presupuesto_max": 1250000,
+      "etapa_actual": 5,
+      "dias_en_etapa": 4,
+      "hiring_manager": "Aileen Vargas",
+      "reclutador": "Diana Cruz",
+      "hrbp": "Paola Núñez",
+      "perfil_no_negociables": [
+        "5+ años liderando proyectos e-commerce",
+        "Gestión de equipos multidisciplinarios",
+        "Inglés C1"
+      ]
+    },
+    {
+      "id": "VAC-102",
+      "titulo": "Analista de Datos BI",
+      "area": "Inteligencia de Negocio",
+      "complejidad": "Medio",
+      "presupuesto_max": 700000,
+      "etapa_actual": 5,
+      "dias_en_etapa": 3,
+      "hiring_manager": "Juan Perez",
+      "reclutador": "Emilio Rangel",
+      "hrbp": "Paola Núñez",
+      "perfil_no_negociables": [
+        "SQL avanzado",
+        "Tableau o Power BI",
+        "Inglés B2 o superior"
+      ]
+    },
+    {
+      "id": "VAC-103",
+      "titulo": "Diseñador(a) UX/UI Senior",
+      "area": "Producto Digital",
+      "complejidad": "Medio",
+      "presupuesto_max": 1100000,
+      "etapa_actual": 4,
+      "dias_en_etapa": 9,
+      "hiring_manager": "Roberto Lara",
+      "reclutador": "Diana Cruz",
+      "hrbp": "Gustavo Ibarra",
+      "perfil_no_negociables": [
+        "5+ años en diseño de producto",
+        "Portafolio mobile y web",
+        "Figma avanzado"
+      ]
+    },
+    {
+      "id": "VAC-104",
+      "titulo": "Arquitecto(a) de Soluciones Cloud",
+      "area": "Infraestructura TI",
+      "complejidad": "Complejo",
+      "presupuesto_max": 1500000,
+      "etapa_actual": 4,
+      "dias_en_etapa": 12,
+      "hiring_manager": "Sofia Rodriguez",
+      "reclutador": "Emilio Rangel",
+      "hrbp": "Gustavo Ibarra",
+      "perfil_no_negociables": [
+        "Certificación cloud nivel profesional",
+        "8+ años en arquitectura",
+        "Inglés C1"
+      ]
+    },
+    {
+      "id": "VAC-105",
+      "titulo": "Scrum Master",
+      "area": "Transformación Ágil",
+      "complejidad": "Medio",
+      "presupuesto_max": 900000,
+      "etapa_actual": 5,
+      "dias_en_etapa": 5,
+      "hiring_manager": "Andrés Molina",
+      "reclutador": "Diana Cruz",
+      "hrbp": "Paola Núñez",
+      "perfil_no_negociables": [
+        "Certificación CSM o PSM",
+        "3+ años facilitando equipos de desarrollo"
+      ]
+    },
+    {
+      "id": "VAC-106",
+      "titulo": "Especialista en Marketing Digital",
+      "area": "Marketing",
+      "complejidad": "Bajo",
+      "presupuesto_max": 800000,
+      "etapa_actual": 4,
+      "dias_en_etapa": 6,
+      "hiring_manager": "Carlos Sanchez",
+      "reclutador": "Emilio Rangel",
+      "hrbp": "Paola Núñez",
+      "perfil_no_negociables": [
+        "Campañas SEM y redes sociales",
+        "Certificación Google Ads"
+      ]
+    },
+    {
+      "id": "VAC-107",
+      "titulo": "Desarrollador(a) Frontend",
+      "area": "Ingeniería de Software",
+      "complejidad": "Medio",
+      "presupuesto_max": 750000,
+      "etapa_actual": 4,
+      "dias_en_etapa": 8,
+      "hiring_manager": "Sofia Rodriguez",
+      "reclutador": "Emilio Rangel",
+      "hrbp": "Gustavo Ibarra",
+      "perfil_no_negociables": [
+        "React o Flutter en producción",
+        "TypeScript",
+        "Inglés B2"
+      ]
+    },
+    {
+      "id": "VAC-108",
+      "titulo": "Becario(a) de QA",
+      "area": "Calidad de Software",
+      "complejidad": "Bajo",
+      "presupuesto_max": 160000,
+      "etapa_actual": 4,
+      "dias_en_etapa": 3,
+      "hiring_manager": "Elena Ríos",
+      "reclutador": "Diana Cruz",
+      "hrbp": "Gustavo Ibarra",
+      "perfil_no_negociables": [
+        "Estudiante de últimos semestres",
+        "Nociones de pruebas automatizadas"
+      ]
+    },
+    {
+      "id": "VAC-109",
+      "titulo": "HR Business Partner",
+      "area": "Capital Humano",
+      "complejidad": "Alto",
+      "presupuesto_max": 1000000,
+      "etapa_actual": 6,
+      "dias_en_etapa": 2,
+      "hiring_manager": "Marcela Duarte",
+      "reclutador": "Diana Cruz",
+      "hrbp": "Paola Núñez",
+      "perfil_no_negociables": [
+        "6+ años como HRBP",
+        "Relaciones laborales",
+        "Inglés C1"
+      ]
+    },
+    {
+      "id": "VAC-110",
+      "titulo": "Gerente de Tienda Departamental",
+      "area": "Operaciones de Tienda",
+      "complejidad": "Alto",
+      "presupuesto_max": 950000,
+      "etapa_actual": 1,
+      "dias_en_etapa": 1,
+      "hiring_manager": "Andrés Molina",
+      "reclutador": "Emilio Rangel",
+      "hrbp": "Paola Núñez",
+      "perfil_no_negociables": [
+        "5+ años liderando tiendas de retail",
+        "Manejo de P&L de la unidad",
+        "Disponibilidad para rotar turnos"
+      ]
+    },
+    {
+      "id": "VAC-111",
+      "titulo": "Coordinador(a) de Logística E-commerce",
+      "area": "Cadena de Suministro",
+      "complejidad": "Medio",
+      "presupuesto_max": 700000,
+      "etapa_actual": 2,
+      "dias_en_etapa": 3,
+      "hiring_manager": "Aileen Vargas",
+      "reclutador": "Diana Cruz",
+      "hrbp": "Gustavo Ibarra",
+      "perfil_no_negociables": [
+        "3+ años en logística de última milla",
+        "Dominio de WMS o SAP EWM",
+        "Inglés B2"
+      ]
+    }
+  ],
+  "candidatos": [
+    {
+      "id": 1,
+      "vacante_id": "VAC-101",
+      "nombre": "Ana López",
+      "puesto_actual": "Gerente de Proyectos E-commerce",
+      "empresa_actual": "Retail Digital S.A.",
+      "resumen_profesional": "Gerente de Proyectos con 8 años de experiencia liderando la implementación de plataformas de e-commerce y optimizando la experiencia de usuario. Experta en metodologías ágiles y gestión de equipos multidisciplinarios.",
+      "anos_experiencia": 8,
+      "compensacion_actual": 1000000,
+      "compensacion_deseada": 1200000,
+      "escolaridad": "Licenciatura en Marketing Digital",
+      "otros_estudios": "Certificación PMP, Diplomado en UX/UI",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/ana_lopez.pdf",
+      "assessfirst": {
+        "compatibilidad": 92,
+        "descripcion": "Perfil orientado a resultados, con altas capacidades de liderazgo y visión estratégica. Excelente para roles de gestión.",
+        "fortalezas": [
+          "Liderazgo",
+          "Planificación estratégica",
+          "Comunicación efectiva"
+        ],
+        "areas_oportunidad": [
+          "Profundizar en análisis de datos técnicos"
+        ],
+        "estilo_liderazgo": "Transformacional",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Basada en datos y experiencia",
+        "recomendaciones": "Altamente recomendada para liderar proyectos de alto impacto."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 2,
+      "entrevistas": [
+        {
+          "entrevista_id": 500,
+          "dias_desde_hoy": -12,
+          "entrevistadores": [
+            "Sofia Rodriguez (Líder Técnico)"
+          ],
+          "notas": "Sólido conocimiento técnico en plataformas e-commerce. Respondió con seguridad a preguntas sobre arquitectura de sistemas.",
+          "veredicto": "Recomendado"
+        },
+        {
+          "entrevista_id": 501,
+          "dias_desde_hoy": -5,
+          "entrevistadores": [
+            "Carlos Sanchez (Director de Marketing)",
+            "Aileen Vargas (Hiring Manager)"
+          ],
+          "notas": "Excelente visión de negocio y enfoque en el cliente. Presentó casos de éxito relevantes. Aileen Vargas: 'Su experiencia en optimización de conversión es justo lo que buscamos'.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "vacante_id": "VAC-101",
+      "nombre": "Carlos Mendoza",
+      "puesto_actual": "Desarrollador Backend Senior",
+      "empresa_actual": "Soluciones Tech S. de R.L.",
+      "resumen_profesional": "Desarrollador Backend con 6 años de experiencia en la construcción de APIs RESTful y microservicios con Java y Spring Boot. Apasionado por el código limpio y las buenas prácticas de desarrollo.",
+      "anos_experiencia": 6,
+      "compensacion_actual": 850000,
+      "compensacion_deseada": 950000,
+      "escolaridad": "Ingeniería en Sistemas Computacionales",
+      "otros_estudios": "Certificación AWS Certified Developer",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/carlos_mendoza.pdf",
+      "assessfirst": {
+        "compatibilidad": 88,
+        "descripcion": "Perfil técnico robusto, con gran capacidad de análisis y resolución de problemas. Colaborador y proactivo.",
+        "fortalezas": [
+          "Resolución de problemas",
+          "Lógica de programación",
+          "Trabajo en equipo"
+        ],
+        "areas_oportunidad": [
+          "Desarrollar habilidades de mentoría"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Analítica y metódica",
+        "recomendaciones": "Recomendado para roles Senior que requieran alta capacidad técnica."
+      },
+      "status_proceso": "Descartado",
+      "status_justificacion": "Aunque es técnicamente muy sólido, buscamos un perfil con más experiencia en liderazgo de equipos para la posición actual.",
+      "enviado_hm": true,
+      "dias_esperando_hm": null,
+      "entrevistas": [
+        {
+          "entrevista_id": 502,
+          "dias_desde_hoy": -11,
+          "entrevistadores": [
+            "Sofia Rodriguez (Líder Técnico)"
+          ],
+          "notas": "Dominio excepcional de Spring Boot y microservicios. Resolvió el reto técnico en tiempo récord. Muy buen fit técnico.",
+          "veredicto": "Recomendado"
+        },
+        {
+          "entrevista_id": 503,
+          "dias_desde_hoy": -4,
+          "entrevistadores": [
+            "Aileen Vargas (Hiring Manager)"
+          ],
+          "notas": "Gran actitud y habilidades técnicas. Sin embargo, en la conversación sobre liderazgo de proyectos, mostró menos experiencia de la requerida.",
+          "veredicto": "No recomendado"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "vacante_id": "VAC-102",
+      "nombre": "Sofia Herrera",
+      "puesto_actual": "Analista de Datos Jr.",
+      "empresa_actual": "Consultoría Analítica Co.",
+      "resumen_profesional": "Analista de Datos con 2 años de experiencia en la extracción y visualización de datos para la toma de decisiones. Experiencia con SQL, Python (Pandas) y Tableau.",
+      "anos_experiencia": 2,
+      "compensacion_actual": 500000,
+      "compensacion_deseada": 600000,
+      "escolaridad": "Actuaría",
+      "otros_estudios": "Curso intensivo de Ciencia de Datos",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/sofia_herrera.pdf",
+      "assessfirst": {
+        "compatibilidad": 95,
+        "descripcion": "Perfil con alto potencial, muy analítica y con una gran curiosidad intelectual. Rápido aprendizaje y alta motivación.",
+        "fortalezas": [
+          "Análisis numérico",
+          "Curiosidad",
+          "Atención al detalle"
+        ],
+        "areas_oportunidad": [
+          "Experiencia en proyectos de gran escala"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Baja",
+        "toma_decisiones": "Basada en evidencia y datos",
+        "recomendaciones": "Excelente candidata para una posición de entrada con alto potencial de crecimiento."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 3,
+      "entrevistas": [
+        {
+          "entrevista_id": 504,
+          "dias_desde_hoy": -9,
+          "entrevistadores": [
+            "Juan Perez (Gerente de BI)"
+          ],
+          "notas": "Conocimientos sólidos en SQL y Tableau. Demostró gran capacidad para interpretar datos y comunicar hallazgos. Potencial a desarrollar.",
+          "veredicto": "Recomendado"
+        },
+        {
+          "entrevista_id": 505,
+          "dias_desde_hoy": -3,
+          "entrevistadores": [
+            "Aileen Vargas (Hiring Manager)"
+          ],
+          "notas": "Muy entusiasta y con ganas de aprender. Se alinea bien con la cultura del equipo. Pendiente de la entrevista final con el director del área.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "vacante_id": "VAC-103",
+      "nombre": "Javier Torres",
+      "puesto_actual": "Diseñador UX/UI Senior",
+      "empresa_actual": "Creativos App Factory",
+      "resumen_profesional": "Diseñador UX/UI con más de 7 años de experiencia en la creación de interfaces intuitivas para aplicaciones móviles y web. Experto en Figma, Sketch y Adobe XD.",
+      "anos_experiencia": 7,
+      "compensacion_actual": 900000,
+      "compensacion_deseada": 1050000,
+      "escolaridad": "Licenciatura en Diseño Gráfico",
+      "otros_estudios": "Certificación en Interacción Humano-Computadora",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/javier_torres.pdf",
+      "assessfirst": {
+        "compatibilidad": 85,
+        "descripcion": "Creativo y enfocado en el usuario.",
+        "fortalezas": [
+          "Creatividad",
+          "Empatía"
+        ],
+        "areas_oportunidad": [
+          "Gestión de proyectos"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Intuitiva, validada con usuarios",
+        "recomendaciones": "Fuerte para roles de diseño senior."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": []
+    },
+    {
+      "id": 5,
+      "vacante_id": "VAC-106",
+      "nombre": "Laura Jimenez",
+      "puesto_actual": "Especialista en Marketing Digital",
+      "empresa_actual": "Agencia Impacto Online",
+      "resumen_profesional": "Especialista en Marketing Digital con 4 años de experiencia en campañas de SEO/SEM, redes sociales y email marketing.",
+      "anos_experiencia": 4,
+      "compensacion_actual": 650000,
+      "compensacion_deseada": 750000,
+      "escolaridad": "Licenciatura en Comunicación",
+      "otros_estudios": "Certificación Google Ads",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/laura_jimenez.pdf",
+      "assessfirst": {
+        "compatibilidad": 89,
+        "descripcion": "Orientada a resultados, proactiva.",
+        "fortalezas": [
+          "Análisis de métricas",
+          "Creatividad"
+        ],
+        "areas_oportunidad": [
+          "Liderazgo de equipos"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Basada en métricas de campaña",
+        "recomendaciones": "Buen fit para roles de ejecución de campañas."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": []
+    },
+    {
+      "id": 6,
+      "vacante_id": "VAC-104",
+      "nombre": "David Peña",
+      "puesto_actual": "Arquitecto de Soluciones Cloud",
+      "empresa_actual": "Nube Segura Inc.",
+      "resumen_profesional": "Arquitecto Cloud con 10 años de experiencia diseñando e implementando soluciones escalables y seguras en AWS y Azure.",
+      "anos_experiencia": 10,
+      "compensacion_actual": 1500000,
+      "compensacion_deseada": 1700000,
+      "escolaridad": "Ingeniería en Telemática",
+      "otros_estudios": "Certificaciones AWS Solutions Architect Professional y Azure Solutions Architect Expert",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/david_pena.pdf",
+      "assessfirst": {
+        "compatibilidad": 91,
+        "descripcion": "Visión estratégica y profundo conocimiento técnico.",
+        "fortalezas": [
+          "Arquitectura de sistemas",
+          "Seguridad"
+        ],
+        "areas_oportunidad": [
+          "Gestión de presupuesto"
+        ],
+        "estilo_liderazgo": "Situacional",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Analítica, orientada a riesgos",
+        "recomendaciones": "Candidato ideal para roles de arquitectura de alto nivel."
+      },
+      "status_proceso": "Descartado",
+      "status_justificacion": "Las expectativas salariales exceden el presupuesto para la vacante.",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": []
+    },
+    {
+      "id": 7,
+      "vacante_id": "VAC-105",
+      "nombre": "Fernanda Morales",
+      "puesto_actual": "Scrum Master",
+      "empresa_actual": "Agile Development Corp.",
+      "resumen_profesional": "Scrum Master certificada con 5 años de experiencia facilitando ceremonias ágiles y removiendo impedimentos para equipos de desarrollo.",
+      "anos_experiencia": 5,
+      "compensacion_actual": 750000,
+      "compensacion_deseada": 850000,
+      "escolaridad": "Licenciatura en Administración de Empresas",
+      "otros_estudios": "Certified ScrumMaster (CSM), SAFe Agilist",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/fernanda_morales.pdf",
+      "assessfirst": {
+        "compatibilidad": 93,
+        "descripcion": "Facilitadora natural, excelentes habilidades de comunicación.",
+        "fortalezas": [
+          "Comunicación",
+          "Resolución de conflictos"
+        ],
+        "areas_oportunidad": [
+          "Conocimiento técnico profundo"
+        ],
+        "estilo_liderazgo": "Servicial",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Consensuada con el equipo",
+        "recomendaciones": "Recomendada para mejorar la agilidad de los equipos."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 4,
+      "entrevistas": [
+        {
+          "entrevista_id": 506,
+          "dias_desde_hoy": -6,
+          "entrevistadores": [
+            "Diana Cruz (Reclutadora)"
+          ],
+          "notas": "Facilitadora muy clara; ejemplos concretos de mejora en velocidad de equipos.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "vacante_id": "VAC-107",
+      "nombre": "Ricardo Salas",
+      "puesto_actual": "Desarrollador Frontend",
+      "empresa_actual": "Innovación Web",
+      "resumen_profesional": "Desarrollador Frontend con 3 años de experiencia construyendo interfaces de usuario responsivas con React y TypeScript.",
+      "anos_experiencia": 3,
+      "compensacion_actual": 600000,
+      "compensacion_deseada": 700000,
+      "escolaridad": "Ingeniería en Tecnologías de la Información",
+      "otros_estudios": "Cursos avanzados de React en Platzi",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/ricardo_salas.pdf",
+      "assessfirst": {
+        "compatibilidad": 87,
+        "descripcion": "Apasionado por la tecnología y la experiencia de usuario.",
+        "fortalezas": [
+          "React",
+          "CSS",
+          "Trabajo en equipo"
+        ],
+        "areas_oportunidad": [
+          "Automatización de pruebas"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Baja",
+        "toma_decisiones": "Práctica y orientada a la entrega",
+        "recomendaciones": "Buen candidato para un equipo de desarrollo frontend."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": []
+    },
+    {
+      "id": 9,
+      "vacante_id": "VAC-109",
+      "nombre": "Mariana Castillo",
+      "puesto_actual": "HR Business Partner",
+      "empresa_actual": "Talento Humano Global",
+      "resumen_profesional": "HRBP con 6 años de experiencia gestionando el ciclo de vida del empleado, relaciones laborales y desarrollo organizacional.",
+      "anos_experiencia": 6,
+      "compensacion_actual": 800000,
+      "compensacion_deseada": 900000,
+      "escolaridad": "Licenciatura en Psicología Organizacional",
+      "otros_estudios": "Maestría en Desarrollo Humano",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/mariana_castillo.pdf",
+      "assessfirst": {
+        "compatibilidad": 90,
+        "descripcion": "Empática, estratégica y con fuerte enfoque en el negocio.",
+        "fortalezas": [
+          "Relaciones laborales",
+          "Comunicación"
+        ],
+        "areas_oportunidad": [
+          "Análisis de datos de RH"
+        ],
+        "estilo_liderazgo": "Coach",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Equilibra negocio y personas",
+        "recomendaciones": "Fuerte candidata para una posición de HRBP."
+      },
+      "status_proceso": "Descartado",
+      "status_justificacion": "Se decidió por un candidato interno.",
+      "enviado_hm": true,
+      "dias_esperando_hm": null,
+      "entrevistas": [
+        {
+          "entrevista_id": 507,
+          "dias_desde_hoy": -20,
+          "entrevistadores": [
+            "Marcela Duarte (Hiring Manager)"
+          ],
+          "notas": "Muy buena candidata; se priorizó la promoción interna.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "vacante_id": "VAC-108",
+      "nombre": "Oscar Paredes",
+      "puesto_actual": "Becario de Calidad de Software",
+      "empresa_actual": "Pruebas Perfectas Ltda.",
+      "resumen_profesional": "Estudiante de último semestre de Ingeniería de Software buscando experiencia en el área de QA. Conocimientos básicos en Selenium y Cypress.",
+      "anos_experiencia": 0,
+      "compensacion_actual": 100000,
+      "compensacion_deseada": 150000,
+      "escolaridad": "Estudiante de Ingeniería de Software",
+      "otros_estudios": "Ninguno",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/oscar_paredes.pdf",
+      "assessfirst": {
+        "compatibilidad": 82,
+        "descripcion": "Alto potencial, con ganas de aprender.",
+        "fortalezas": [
+          "Atención al detalle",
+          "Lógica"
+        ],
+        "areas_oportunidad": [
+          "Experiencia práctica"
+        ],
+        "estilo_liderazgo": "En desarrollo",
+        "vision_estrategica": "Baja",
+        "toma_decisiones": "Metódica, apoyada en guías",
+        "recomendaciones": "Buen candidato para un programa de becarios."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 1,
+      "entrevistas": []
+    },
+    {
+      "id": 11,
+      "vacante_id": "VAC-101",
+      "nombre": "Patricia Ruiz",
+      "puesto_actual": "Líder de Proyectos Omnicanal",
+      "empresa_actual": "Moda y Estilo MX",
+      "resumen_profesional": "Líder de proyectos con 9 años integrando tienda física, e-commerce y marketplaces. Ha dirigido equipos de hasta 20 personas en lanzamientos nacionales.",
+      "anos_experiencia": 9,
+      "compensacion_actual": 1150000,
+      "compensacion_deseada": 1320000,
+      "escolaridad": "Licenciatura en Administración",
+      "otros_estudios": "Certificación PMP, Certified Scrum Product Owner",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Francés",
+          "nivel": "B1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/patricia_ruiz.pdf",
+      "assessfirst": {
+        "compatibilidad": 90,
+        "descripcion": "Líder con enfoque omnicanal y alta tolerancia a la presión.",
+        "fortalezas": [
+          "Gestión de stakeholders",
+          "Negociación",
+          "Visión omnicanal"
+        ],
+        "areas_oportunidad": [
+          "Delegación"
+        ],
+        "estilo_liderazgo": "Directivo",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Rápida, orientada a objetivos de negocio",
+        "recomendaciones": "Recomendada para proyectos de transformación con alta exposición directiva."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 4,
+      "entrevistas": [
+        {
+          "entrevista_id": 508,
+          "dias_desde_hoy": -7,
+          "entrevistadores": [
+            "Sofia Rodriguez (Líder Técnico)"
+          ],
+          "notas": "Buen entendimiento de integraciones con marketplaces; menos profundidad en arquitectura.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "vacante_id": "VAC-101",
+      "nombre": "Héctor Galván",
+      "puesto_actual": "Product Owner E-commerce",
+      "empresa_actual": "MercaNet Retail",
+      "resumen_profesional": "Product Owner con 6 años gestionando el backlog de un e-commerce de alto tráfico. Experiencia en experimentación A/B y optimización del embudo de compra.",
+      "anos_experiencia": 6,
+      "compensacion_actual": 900000,
+      "compensacion_deseada": 1080000,
+      "escolaridad": "Ingeniería Industrial",
+      "otros_estudios": "Certified Scrum Product Owner, Diplomado en Analítica Web",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/hector_galvan.pdf",
+      "assessfirst": {
+        "compatibilidad": 86,
+        "descripcion": "Analítico y orientado al cliente, con buena capacidad de priorización.",
+        "fortalezas": [
+          "Priorización de backlog",
+          "Analítica web",
+          "Enfoque en el cliente"
+        ],
+        "areas_oportunidad": [
+          "Liderazgo de equipos grandes"
+        ],
+        "estilo_liderazgo": "Participativo",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Basada en métricas de conversión",
+        "recomendaciones": "Recomendado para roles de producto con acompañamiento en liderazgo."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 6,
+      "entrevistas": [
+        {
+          "entrevista_id": 509,
+          "dias_desde_hoy": -10,
+          "entrevistadores": [
+            "Sofia Rodriguez (Líder Técnico)"
+          ],
+          "notas": "Sólido en analítica y experimentación A/B.",
+          "veredicto": "Recomendado"
+        },
+        {
+          "entrevista_id": 510,
+          "dias_desde_hoy": -6,
+          "entrevistadores": [
+            "Aileen Vargas (Hiring Manager)"
+          ],
+          "notas": "Entrevista realizada. Falta registrar el veredicto.",
+          "veredicto": null
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "vacante_id": "VAC-102",
+      "nombre": "Rodrigo Aguilar",
+      "puesto_actual": "Analista BI",
+      "empresa_actual": "Grupo Financiero Horizonte",
+      "resumen_profesional": "Analista BI con 3 años construyendo tableros ejecutivos y modelos de datos en Power BI y SQL Server para áreas comerciales.",
+      "anos_experiencia": 3,
+      "compensacion_actual": 620000,
+      "compensacion_deseada": 720000,
+      "escolaridad": "Licenciatura en Economía",
+      "otros_estudios": "Microsoft PL-300 Power BI Data Analyst",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/rodrigo_aguilar.pdf",
+      "assessfirst": {
+        "compatibilidad": 88,
+        "descripcion": "Estructurado y confiable, con buen dominio de modelado de datos.",
+        "fortalezas": [
+          "Modelado de datos",
+          "Power BI",
+          "Documentación"
+        ],
+        "areas_oportunidad": [
+          "Comunicación con áreas de negocio"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Metódica, basada en datos validados",
+        "recomendaciones": "Recomendado para posiciones de BI con foco en reporting."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 2,
+      "entrevistas": [
+        {
+          "entrevista_id": 511,
+          "dias_desde_hoy": -4,
+          "entrevistadores": [
+            "Juan Perez (Gerente de BI)"
+          ],
+          "notas": "Muy buen modelado en Power BI; menos experiencia con Tableau.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "vacante_id": "VAC-102",
+      "nombre": "Valeria Soto",
+      "puesto_actual": "Data Analyst",
+      "empresa_actual": "LogiTrack",
+      "resumen_profesional": "Analista de datos con 2 años en una startup de logística. Automatiza reportes con Python y construye análisis de rutas y tiempos de entrega.",
+      "anos_experiencia": 2,
+      "compensacion_actual": 480000,
+      "compensacion_deseada": 580000,
+      "escolaridad": "Ingeniería en Matemáticas Aplicadas",
+      "otros_estudios": "Google Data Analytics Certificate",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/valeria_soto.pdf",
+      "assessfirst": {
+        "compatibilidad": 84,
+        "descripcion": "Curiosa y autodidacta, con base estadística sólida.",
+        "fortalezas": [
+          "Estadística",
+          "Python",
+          "Autoaprendizaje"
+        ],
+        "areas_oportunidad": [
+          "Visualización ejecutiva"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Baja",
+        "toma_decisiones": "Basada en evidencia estadística",
+        "recomendaciones": "Buena candidata para crecer dentro de un equipo de BI."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 1,
+      "entrevistas": []
+    },
+    {
+      "id": 15,
+      "vacante_id": "VAC-102",
+      "nombre": "Iván Núñez",
+      "puesto_actual": "Analista Jr. de Riesgos",
+      "empresa_actual": "Aseguradora Pacífico",
+      "resumen_profesional": "Actuario con 1 año de experiencia en análisis de siniestralidad en Excel. Busca migrar a analítica de negocio.",
+      "anos_experiencia": 1,
+      "compensacion_actual": 380000,
+      "compensacion_deseada": 450000,
+      "escolaridad": "Actuaría",
+      "otros_estudios": "Curso de SQL (Coursera)",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/ivan_nunez.pdf",
+      "assessfirst": {
+        "compatibilidad": 79,
+        "descripcion": "Detallista, con motivación por migrar a analítica de negocio.",
+        "fortalezas": [
+          "Atención al detalle",
+          "Excel avanzado"
+        ],
+        "areas_oportunidad": [
+          "SQL avanzado",
+          "Inglés"
+        ],
+        "estilo_liderazgo": "En desarrollo",
+        "vision_estrategica": "Baja",
+        "toma_decisiones": "Apegada a procesos",
+        "recomendaciones": "Considerar para posiciones de entrada."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": []
+    },
+    {
+      "id": 16,
+      "vacante_id": "VAC-103",
+      "nombre": "Camila Reyes",
+      "puesto_actual": "Product Designer",
+      "empresa_actual": "Fintech Nube",
+      "resumen_profesional": "Diseñadora de producto con 6 años. Construyó el sistema de diseño de una fintech con más de 2 millones de usuarios y lidera pruebas de usabilidad.",
+      "anos_experiencia": 6,
+      "compensacion_actual": 880000,
+      "compensacion_deseada": 1000000,
+      "escolaridad": "Licenciatura en Diseño Industrial",
+      "otros_estudios": "Google UX Design Certificate, Curso de Design Systems",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/camila_reyes.pdf",
+      "assessfirst": {
+        "compatibilidad": 90,
+        "descripcion": "Diseñadora sistémica con gran empatía por el usuario.",
+        "fortalezas": [
+          "Sistemas de diseño",
+          "Investigación con usuarios",
+          "Prototipado"
+        ],
+        "areas_oportunidad": [
+          "Presentación a directivos"
+        ],
+        "estilo_liderazgo": "Coach",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Validada con datos de usuario",
+        "recomendaciones": "Recomendada para liderar el sistema de diseño."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 5,
+      "entrevistas": [
+        {
+          "entrevista_id": 512,
+          "dias_desde_hoy": -8,
+          "entrevistadores": [
+            "Diana Cruz (Reclutadora)"
+          ],
+          "notas": "Portafolio muy fuerte en mobile; buena comunicación.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "vacante_id": "VAC-103",
+      "nombre": "Tomás Villalobos",
+      "puesto_actual": "UX Researcher",
+      "empresa_actual": "Agencia Pixel",
+      "resumen_profesional": "Investigador UX con 5 años diseñando estudios cualitativos y pruebas de usabilidad para clientes de retail y banca.",
+      "anos_experiencia": 5,
+      "compensacion_actual": 780000,
+      "compensacion_deseada": 880000,
+      "escolaridad": "Licenciatura en Psicología",
+      "otros_estudios": "Nielsen Norman Group UX Certificate",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/tomas_villalobos.pdf",
+      "assessfirst": {
+        "compatibilidad": 83,
+        "descripcion": "Investigador riguroso con fuerte orientación a la evidencia.",
+        "fortalezas": [
+          "Investigación cualitativa",
+          "Pruebas de usabilidad"
+        ],
+        "areas_oportunidad": [
+          "Diseño visual de interfaces"
+        ],
+        "estilo_liderazgo": "Democrático",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Basada en hallazgos de investigación",
+        "recomendaciones": "Fuerte para roles de research; menor fit para UI."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": []
+    },
+    {
+      "id": 18,
+      "vacante_id": "VAC-104",
+      "nombre": "Alejandro Meza",
+      "puesto_actual": "Cloud Architect",
+      "empresa_actual": "DataCenter Norte",
+      "resumen_profesional": "Arquitecto cloud con 8 años diseñando infraestructura de alta disponibilidad en AWS para clientes de retail y logística.",
+      "anos_experiencia": 8,
+      "compensacion_actual": 1250000,
+      "compensacion_deseada": 1400000,
+      "escolaridad": "Ingeniería en Sistemas",
+      "otros_estudios": "AWS Solutions Architect Professional",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/alejandro_meza.pdf",
+      "assessfirst": {
+        "compatibilidad": 89,
+        "descripcion": "Pragmático y orientado a la estabilidad de la operación.",
+        "fortalezas": [
+          "AWS",
+          "Alta disponibilidad",
+          "Automatización"
+        ],
+        "areas_oportunidad": [
+          "Estrategia multinube"
+        ],
+        "estilo_liderazgo": "Situacional",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Analítica, orientada a riesgos",
+        "recomendaciones": "Recomendado para arquitectura AWS a gran escala."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 2,
+      "entrevistas": [
+        {
+          "entrevista_id": 513,
+          "dias_desde_hoy": -5,
+          "entrevistadores": [
+            "Sofia Rodriguez (Líder Técnico)"
+          ],
+          "notas": "Diseñó una arquitectura resiliente en el caso práctico.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "vacante_id": "VAC-104",
+      "nombre": "Lucía Fernández",
+      "puesto_actual": "Líder de DevOps y Cloud",
+      "empresa_actual": "BancoDigital MX",
+      "resumen_profesional": "Líder técnica con 9 años. Dirigió la migración multinube de un banco digital y un equipo de 12 ingenieros de plataforma.",
+      "anos_experiencia": 9,
+      "compensacion_actual": 1300000,
+      "compensacion_deseada": 1480000,
+      "escolaridad": "Ingeniería en Computación",
+      "otros_estudios": "Azure Solutions Architect Expert, Google Professional Cloud Architect",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/lucia_fernandez.pdf",
+      "assessfirst": {
+        "compatibilidad": 92,
+        "descripcion": "Visión estratégica multinube y liderazgo técnico probado.",
+        "fortalezas": [
+          "Multinube",
+          "Liderazgo técnico",
+          "Seguridad"
+        ],
+        "areas_oportunidad": [
+          "Gestión de proveedores"
+        ],
+        "estilo_liderazgo": "Transformacional",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Basada en datos y experiencia",
+        "recomendaciones": "Altamente recomendada para arquitectura de alto nivel."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 3,
+      "entrevistas": [
+        {
+          "entrevista_id": 514,
+          "dias_desde_hoy": -9,
+          "entrevistadores": [
+            "Emilio Rangel (Reclutador)"
+          ],
+          "notas": "Excelente comunicación y trayectoria.",
+          "veredicto": "Recomendado"
+        },
+        {
+          "entrevista_id": 515,
+          "dias_desde_hoy": -3,
+          "entrevistadores": [
+            "Sofia Rodriguez (Líder Técnico)"
+          ],
+          "notas": "Entrevista técnica realizada. Veredicto pendiente.",
+          "veredicto": null
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "vacante_id": "VAC-105",
+      "nombre": "Jorge Castañeda",
+      "puesto_actual": "Agile Coach",
+      "empresa_actual": "Consultora Ágil 360",
+      "resumen_profesional": "Agile Coach con 7 años acompañando transformaciones ágiles en retail y banca, con experiencia en marcos escalados.",
+      "anos_experiencia": 7,
+      "compensacion_actual": 900000,
+      "compensacion_deseada": 1000000,
+      "escolaridad": "Ingeniería en Sistemas",
+      "otros_estudios": "SAFe Program Consultant (SPC), ICAgile Certified Coach",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/jorge_castaneda.pdf",
+      "assessfirst": {
+        "compatibilidad": 87,
+        "descripcion": "Coach experimentado con visión organizacional.",
+        "fortalezas": [
+          "Coaching de equipos",
+          "Agilidad escalada"
+        ],
+        "areas_oportunidad": [
+          "Ejecución operativa del día a día"
+        ],
+        "estilo_liderazgo": "Coach",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Consensuada y basada en principios ágiles",
+        "recomendaciones": "Recomendado si el rol evoluciona a coaching."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 3,
+      "entrevistas": [
+        {
+          "entrevista_id": 516,
+          "dias_desde_hoy": -7,
+          "entrevistadores": [
+            "Diana Cruz (Reclutadora)"
+          ],
+          "notas": "Muy sólido; expectativas por encima del presupuesto.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "vacante_id": "VAC-105",
+      "nombre": "Renata Olvera",
+      "puesto_actual": "Scrum Master",
+      "empresa_actual": "SoftFactory",
+      "resumen_profesional": "Scrum Master con 3 años facilitando dos equipos de desarrollo de software a la medida.",
+      "anos_experiencia": 3,
+      "compensacion_actual": 600000,
+      "compensacion_deseada": 700000,
+      "escolaridad": "Licenciatura en Informática",
+      "otros_estudios": "Professional Scrum Master I (PSM I)",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/renata_olvera.pdf",
+      "assessfirst": {
+        "compatibilidad": 85,
+        "descripcion": "Organizada y cercana al equipo.",
+        "fortalezas": [
+          "Facilitación",
+          "Organización"
+        ],
+        "areas_oportunidad": [
+          "Manejo de conflictos"
+        ],
+        "estilo_liderazgo": "Servicial",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Consensuada con el equipo",
+        "recomendaciones": "Buen fit para equipos en etapa inicial de agilidad."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": []
+    },
+    {
+      "id": 22,
+      "vacante_id": "VAC-106",
+      "nombre": "Gabriela Montes",
+      "puesto_actual": "Performance Marketing Manager",
+      "empresa_actual": "E-shop Beauty",
+      "resumen_profesional": "Especialista en medios pagados con 5 años gestionando inversión en Google y Meta con foco en retorno de inversión publicitaria.",
+      "anos_experiencia": 5,
+      "compensacion_actual": 700000,
+      "compensacion_deseada": 800000,
+      "escolaridad": "Licenciatura en Mercadotecnia",
+      "otros_estudios": "Google Ads, Meta Blueprint",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/gabriela_montes.pdf",
+      "assessfirst": {
+        "compatibilidad": 91,
+        "descripcion": "Orientada a resultados con dominio de medios pagados.",
+        "fortalezas": [
+          "Medios pagados",
+          "Optimización de ROAS",
+          "Análisis de métricas"
+        ],
+        "areas_oportunidad": [
+          "Contenido orgánico"
+        ],
+        "estilo_liderazgo": "Participativo",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Basada en métricas de campaña",
+        "recomendaciones": "Recomendada para campañas de performance."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 1,
+      "entrevistas": []
+    },
+    {
+      "id": 23,
+      "vacante_id": "VAC-106",
+      "nombre": "Diego Salazar",
+      "puesto_actual": "Especialista SEO",
+      "empresa_actual": "Medios Digitales Latam",
+      "resumen_profesional": "Especialista SEO con 3 años posicionando portales de noticias y blogs corporativos.",
+      "anos_experiencia": 3,
+      "compensacion_actual": 550000,
+      "compensacion_deseada": 650000,
+      "escolaridad": "Licenciatura en Comunicación",
+      "otros_estudios": "HubSpot Inbound, SEMrush SEO Toolkit",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/diego_salazar.pdf",
+      "assessfirst": {
+        "compatibilidad": 82,
+        "descripcion": "Creativo y constante, con enfoque en posicionamiento orgánico.",
+        "fortalezas": [
+          "SEO",
+          "Redacción"
+        ],
+        "areas_oportunidad": [
+          "Medios pagados"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Baja",
+        "toma_decisiones": "Intuitiva, validada con pruebas",
+        "recomendaciones": "Considerar para roles de contenido y SEO."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": []
+    },
+    {
+      "id": 24,
+      "vacante_id": "VAC-107",
+      "nombre": "Paula Guerrero",
+      "puesto_actual": "Frontend Developer",
+      "empresa_actual": "Plataforma Educa",
+      "resumen_profesional": "Desarrolladora frontend con 4 años construyendo aplicaciones web accesibles con React, Next.js y TypeScript.",
+      "anos_experiencia": 4,
+      "compensacion_actual": 680000,
+      "compensacion_deseada": 780000,
+      "escolaridad": "Ingeniería de Software",
+      "otros_estudios": "Meta Front-End Developer Certificate",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/paula_guerrero.pdf",
+      "assessfirst": {
+        "compatibilidad": 90,
+        "descripcion": "Detallista y comprometida con la calidad del código.",
+        "fortalezas": [
+          "React",
+          "Next.js",
+          "Accesibilidad web"
+        ],
+        "areas_oportunidad": [
+          "Pruebas end-to-end"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Analítica y metódica",
+        "recomendaciones": "Recomendada para equipos de producto web."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 2,
+      "entrevistas": [
+        {
+          "entrevista_id": 517,
+          "dias_desde_hoy": -4,
+          "entrevistadores": [
+            "Sofia Rodriguez (Líder Técnico)"
+          ],
+          "notas": "Excelente reto técnico; código limpio y accesible.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "vacante_id": "VAC-107",
+      "nombre": "Martín Espinoza",
+      "puesto_actual": "Desarrollador Flutter",
+      "empresa_actual": "AppMovil Pro",
+      "resumen_profesional": "Desarrollador con 5 años entre Flutter y Angular. Ha publicado 6 aplicaciones en tiendas móviles.",
+      "anos_experiencia": 5,
+      "compensacion_actual": 700000,
+      "compensacion_deseada": 760000,
+      "escolaridad": "Ingeniería en Tecnologías de la Información",
+      "otros_estudios": "Google Associate Android Developer",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/martin_espinoza.pdf",
+      "assessfirst": {
+        "compatibilidad": 86,
+        "descripcion": "Versátil entre web y móvil, con buen ritmo de entrega.",
+        "fortalezas": [
+          "Flutter",
+          "Angular",
+          "Entrega continua"
+        ],
+        "areas_oportunidad": [
+          "Documentación técnica"
+        ],
+        "estilo_liderazgo": "Colaborador individual",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Práctica y orientada a la entrega",
+        "recomendaciones": "Buen candidato si se prioriza multiplataforma."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 7,
+      "entrevistas": [
+        {
+          "entrevista_id": 518,
+          "dias_desde_hoy": -8,
+          "entrevistadores": [
+            "Emilio Rangel (Reclutador)"
+          ],
+          "notas": "Buen perfil multiplataforma; enviado a HM.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "vacante_id": "VAC-108",
+      "nombre": "Ximena Luna",
+      "puesto_actual": "Becaria de Desarrollo",
+      "empresa_actual": "Proyecto escolar Tec",
+      "resumen_profesional": "Estudiante de 9.º semestre de Ingeniería en Sistemas. Automatizó pruebas de una app escolar con Cypress.",
+      "anos_experiencia": 0,
+      "compensacion_actual": 80000,
+      "compensacion_deseada": 140000,
+      "escolaridad": "Estudiante de Ingeniería en Sistemas",
+      "otros_estudios": "Curso de Cypress",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/ximena_luna.pdf",
+      "assessfirst": {
+        "compatibilidad": 86,
+        "descripcion": "Proactiva y curiosa, con base sólida en lógica.",
+        "fortalezas": [
+          "Lógica",
+          "Proactividad"
+        ],
+        "areas_oportunidad": [
+          "Experiencia laboral"
+        ],
+        "estilo_liderazgo": "En desarrollo",
+        "vision_estrategica": "Baja",
+        "toma_decisiones": "Metódica, apoyada en guías",
+        "recomendaciones": "Recomendada para programa de becarios."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": true,
+      "dias_esperando_hm": 1,
+      "entrevistas": []
+    },
+    {
+      "id": 27,
+      "vacante_id": "VAC-108",
+      "nombre": "Kevin Ortega",
+      "puesto_actual": "Soporte Técnico (medio tiempo)",
+      "empresa_actual": "CiberNet",
+      "resumen_profesional": "Estudiante de 8.º semestre de Ingeniería en Computación con experiencia en soporte a usuarios.",
+      "anos_experiencia": 0,
+      "compensacion_actual": 90000,
+      "compensacion_deseada": 150000,
+      "escolaridad": "Estudiante de Ingeniería en Computación",
+      "otros_estudios": "Ninguno",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/kevin_ortega.pdf",
+      "assessfirst": {
+        "compatibilidad": 78,
+        "descripcion": "Responsable, con interés en calidad de software.",
+        "fortalezas": [
+          "Responsabilidad",
+          "Atención al cliente"
+        ],
+        "areas_oportunidad": [
+          "Automatización de pruebas"
+        ],
+        "estilo_liderazgo": "En desarrollo",
+        "vision_estrategica": "Baja",
+        "toma_decisiones": "Apegada a procesos",
+        "recomendaciones": "Considerar si hay más de una plaza."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": []
+    },
+    {
+      "id": 28,
+      "vacante_id": "VAC-109",
+      "nombre": "Sergio Beltrán",
+      "puesto_actual": "HR Business Partner",
+      "empresa_actual": "El Puerto de Liverpool (interno)",
+      "resumen_profesional": "HRBP interno con 8 años en la operación de tiendas. Conoce los procesos, la cultura y a los líderes del negocio.",
+      "anos_experiencia": 8,
+      "compensacion_actual": 950000,
+      "compensacion_deseada": 1000000,
+      "escolaridad": "Licenciatura en Relaciones Industriales",
+      "otros_estudios": "Maestría en Administración de Personal",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/sergio_beltran.pdf",
+      "assessfirst": {
+        "compatibilidad": 88,
+        "descripcion": "Conoce la cultura y los procesos internos; fuerte en relaciones laborales.",
+        "fortalezas": [
+          "Conocimiento del negocio",
+          "Relaciones laborales"
+        ],
+        "areas_oportunidad": [
+          "Analítica de RH"
+        ],
+        "estilo_liderazgo": "Participativo",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Equilibra negocio y personas",
+        "recomendaciones": "Recomendado como promoción interna."
+      },
+      "status_proceso": "Finalista",
+      "status_justificacion": "Promoción interna aprobada por HRBP y Hiring Manager.",
+      "enviado_hm": true,
+      "dias_esperando_hm": null,
+      "entrevistas": [
+        {
+          "entrevista_id": 519,
+          "dias_desde_hoy": -18,
+          "entrevistadores": [
+            "Marcela Duarte (Hiring Manager)"
+          ],
+          "notas": "Conocimiento profundo de la operación.",
+          "veredicto": "Recomendado"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "vacante_id": "VAC-110",
+      "nombre": "Daniela Ochoa",
+      "puesto_actual": "Gerente de Tienda",
+      "empresa_actual": "Palacio de Hierro",
+      "resumen_profesional": "Gerente de tienda con 7 años en retail de lujo. Llevó su unidad al top 3 nacional en ventas por metro cuadrado.",
+      "anos_experiencia": 7,
+      "compensacion_actual": 820000,
+      "compensacion_deseada": 900000,
+      "escolaridad": "Licenciatura en Administración",
+      "otros_estudios": "Diplomado en Retail Management",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/daniela_ochoa.pdf",
+      "assessfirst": {
+        "compatibilidad": 91,
+        "descripcion": "Líder comercial orientada a resultados y a la experiencia del cliente.",
+        "fortalezas": [
+          "Gestión de P&L",
+          "Desarrollo de equipos"
+        ],
+        "areas_oportunidad": [
+          "Delegación"
+        ],
+        "estilo_liderazgo": "Coach",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Decide con datos de venta diaria",
+        "recomendaciones": "Avanzar a entrevista con el Hiring Manager."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 30,
+      "vacante_id": "VAC-110",
+      "nombre": "Rodrigo Baeza",
+      "puesto_actual": "Subgerente de Tienda",
+      "empresa_actual": "Sears",
+      "resumen_profesional": "Subgerente con 6 años en tiendas departamentales; responsable de inventarios y de un equipo de 80 personas.",
+      "anos_experiencia": 6,
+      "compensacion_actual": 650000,
+      "compensacion_deseada": 780000,
+      "escolaridad": "Licenciatura en Mercadotecnia",
+      "otros_estudios": "Certificación en Lean Retail",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/rodrigo_baeza.pdf",
+      "assessfirst": {
+        "compatibilidad": 84,
+        "descripcion": "Operativo y disciplinado; fuerte en control de inventario.",
+        "fortalezas": [
+          "Control de inventarios",
+          "Disciplina operativa"
+        ],
+        "areas_oportunidad": [
+          "Visión estratégica"
+        ],
+        "estilo_liderazgo": "Directivo",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Prioriza la operación del día",
+        "recomendaciones": "Buen perfil operativo; validar liderazgo de tienda completa."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 31,
+      "vacante_id": "VAC-110",
+      "nombre": "Mónica Lozano",
+      "puesto_actual": "Gerente de Zona",
+      "empresa_actual": "Coppel",
+      "resumen_profesional": "Gerente de zona con 9 años de experiencia a cargo de 6 sucursales en el Bajío.",
+      "anos_experiencia": 9,
+      "compensacion_actual": 1000000,
+      "compensacion_deseada": 1050000,
+      "escolaridad": "Licenciatura en Negocios Internacionales",
+      "otros_estudios": "MBA (en curso)",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/monica_lozano.pdf",
+      "assessfirst": {
+        "compatibilidad": 87,
+        "descripcion": "Estratega multi-sucursal con fuerte orientación a indicadores.",
+        "fortalezas": [
+          "Visión multi-sucursal",
+          "Negociación"
+        ],
+        "areas_oportunidad": [
+          "Cercanía con piso de venta"
+        ],
+        "estilo_liderazgo": "Transformacional",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Analítica y ágil",
+        "recomendaciones": "Excede el presupuesto; evaluar si el perfil justifica la negociación."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 32,
+      "vacante_id": "VAC-111",
+      "nombre": "Luis Arriaga",
+      "puesto_actual": "Coordinador de Logística",
+      "empresa_actual": "Mercado Libre",
+      "resumen_profesional": "Coordinador de última milla con 4 años operando rutas en CDMX y área metropolitana con SAP EWM.",
+      "anos_experiencia": 4,
+      "compensacion_actual": 560000,
+      "compensacion_deseada": 650000,
+      "escolaridad": "Ingeniería Industrial",
+      "otros_estudios": "Certificación SAP EWM",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/luis_arriaga.pdf",
+      "assessfirst": {
+        "compatibilidad": 90,
+        "descripcion": "Resolutivo bajo presión, domina la operación de última milla.",
+        "fortalezas": [
+          "Optimización de rutas",
+          "SAP EWM"
+        ],
+        "areas_oportunidad": [
+          "Comunicación ejecutiva"
+        ],
+        "estilo_liderazgo": "Situacional",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Rápida y basada en KPIs operativos",
+        "recomendaciones": "Avanzar a entrevista con el Hiring Manager."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 33,
+      "vacante_id": "VAC-111",
+      "nombre": "Karla Méndez",
+      "puesto_actual": "Analista Sr. de Distribución",
+      "empresa_actual": "DHL",
+      "resumen_profesional": "Analista senior con 5 años en centros de distribución; implementó un WMS en dos CEDIS.",
+      "anos_experiencia": 5,
+      "compensacion_actual": 600000,
+      "compensacion_deseada": 690000,
+      "escolaridad": "Ingeniería en Logística",
+      "otros_estudios": "Green Belt Six Sigma",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/karla_mendez.pdf",
+      "assessfirst": {
+        "compatibilidad": 86,
+        "descripcion": "Analítica y metódica; experta en procesos de almacén.",
+        "fortalezas": [
+          "Implementación de WMS",
+          "Mejora continua"
+        ],
+        "areas_oportunidad": [
+          "Liderazgo de equipos grandes"
+        ],
+        "estilo_liderazgo": "Participativo",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Basada en análisis de causa raíz",
+        "recomendaciones": "Buen ajuste técnico; validar liderazgo en operación de última milla."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 34,
+      "vacante_id": "VAC-111",
+      "nombre": "Jorge Salinas",
+      "puesto_actual": "Supervisor de Almacén",
+      "empresa_actual": "Walmart de México",
+      "resumen_profesional": "Supervisor de almacén con 3 años de experiencia, coordinando turnos nocturnos y recepción de mercancía.",
+      "anos_experiencia": 3,
+      "compensacion_actual": 420000,
+      "compensacion_deseada": 520000,
+      "escolaridad": "Licenciatura en Comercio Internacional",
+      "otros_estudios": "Curso de Supply Chain (Coursera)",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/jorge_salinas.pdf",
+      "assessfirst": {
+        "compatibilidad": 78,
+        "descripcion": "Constante y confiable; en desarrollo hacia roles de coordinación.",
+        "fortalezas": [
+          "Disciplina operativa"
+        ],
+        "areas_oportunidad": [
+          "Última milla",
+          "Inglés"
+        ],
+        "estilo_liderazgo": "En desarrollo",
+        "vision_estrategica": "Baja",
+        "toma_decisiones": "Sigue procedimientos establecidos",
+        "recomendaciones": "No cubre los no negociables de última milla e inglés B2."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    }
+  ]
+}
