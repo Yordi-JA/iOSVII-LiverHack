@@ -204,6 +204,57 @@
         "Dominio de WMS o SAP EWM",
         "Inglés B2"
       ]
+    },
+    {
+      "id": "VAC-112",
+      "titulo": "Jefe(a) de Piso de Ventas",
+      "area": "Operaciones de Tienda",
+      "complejidad": "Medio",
+      "presupuesto_max": 520000,
+      "etapa_actual": 1,
+      "dias_en_etapa": 0,
+      "hiring_manager": "Elena Ríos",
+      "reclutador": "Diana Cruz",
+      "hrbp": "Gustavo Ibarra",
+      "perfil_no_negociables": [
+        "3+ años liderando equipos de piso de venta",
+        "Manejo de indicadores de venta y merma",
+        "Disponibilidad de horario en temporada alta"
+      ]
+    },
+    {
+      "id": "VAC-113",
+      "titulo": "Ingeniero(a) de Datos",
+      "area": "Inteligencia de Negocio",
+      "complejidad": "Alto",
+      "presupuesto_max": 1100000,
+      "etapa_actual": 1,
+      "dias_en_etapa": 1,
+      "hiring_manager": "Juan Perez",
+      "reclutador": "Emilio Rangel",
+      "hrbp": "Paola Núñez",
+      "perfil_no_negociables": [
+        "4+ años construyendo pipelines en la nube (GCP o AWS)",
+        "SQL y Python avanzados",
+        "Experiencia con modelos de datos de retail"
+      ]
+    },
+    {
+      "id": "VAC-114",
+      "titulo": "Comprador(a) Jr. de Moda",
+      "area": "Comercial",
+      "complejidad": "Bajo",
+      "presupuesto_max": 420000,
+      "etapa_actual": 1,
+      "dias_en_etapa": 0,
+      "hiring_manager": "Marcela Duarte",
+      "reclutador": "Diana Cruz",
+      "hrbp": "Paola Núñez",
+      "perfil_no_negociables": [
+        "2+ años en compras o planeación de retail",
+        "Excel avanzado",
+        "Inglés intermedio para negociar con marcas"
+      ]
     }
   ],
   "candidatos": [
@@ -1916,6 +1967,411 @@
         "vision_estrategica": "Baja",
         "toma_decisiones": "Sigue procedimientos establecidos",
         "recomendaciones": "No cubre los no negociables de última milla e inglés B2."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 35,
+      "vacante_id": "VAC-112",
+      "nombre": "Rocío Salgado",
+      "puesto_actual": "Subgerente de Tienda",
+      "empresa_actual": "Suburbia",
+      "resumen_profesional": "Subgerente con 6 años en tiendas departamentales. Redujo la merma de su tienda 18 % en un año.",
+      "anos_experiencia": 6,
+      "compensacion_actual": 430000,
+      "compensacion_deseada": 480000,
+      "escolaridad": "Licenciatura en Mercadotecnia",
+      "otros_estudios": "Diplomado en Gestión de Retail",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/rocio_salgado.pdf",
+      "assessfirst": {
+        "compatibilidad": 88,
+        "descripcion": "Líder operativa, cercana al equipo y enfocada en el cliente.",
+        "fortalezas": [
+          "Control de merma",
+          "Motivación de equipos"
+        ],
+        "areas_oportunidad": [
+          "Planeación a largo plazo"
+        ],
+        "estilo_liderazgo": "Participativo",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Decide rápido con los indicadores del día",
+        "recomendaciones": "Avanzar a entrevista con el Hiring Manager."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 36,
+      "vacante_id": "VAC-112",
+      "nombre": "Iván Castañeda",
+      "puesto_actual": "Supervisor de Piso",
+      "empresa_actual": "Sears",
+      "resumen_profesional": "Supervisor de piso con 4 años coordinando equipos de 25 vendedores en temporada alta.",
+      "anos_experiencia": 4,
+      "compensacion_actual": 360000,
+      "compensacion_deseada": 450000,
+      "escolaridad": "Licenciatura en Administración",
+      "otros_estudios": "Curso de Servicio al Cliente",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "A2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/ivan_castaneda.pdf",
+      "assessfirst": {
+        "compatibilidad": 79,
+        "descripcion": "Organizado y constante, fuerte en ejecución.",
+        "fortalezas": [
+          "Organización de turnos",
+          "Servicio al cliente"
+        ],
+        "areas_oportunidad": [
+          "Análisis de datos de venta"
+        ],
+        "estilo_liderazgo": "Directivo",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Sigue procesos establecidos",
+        "recomendaciones": "Validar su manejo de indicadores en entrevista."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 37,
+      "vacante_id": "VAC-112",
+      "nombre": "Mónica Herrera",
+      "puesto_actual": "Coordinadora de Ventas",
+      "empresa_actual": "Coppel",
+      "resumen_profesional": "Coordinadora de ventas con 5 años; lideró la apertura de 2 tiendas en el Bajío.",
+      "anos_experiencia": 5,
+      "compensacion_actual": 400000,
+      "compensacion_deseada": 500000,
+      "escolaridad": "Licenciatura en Comercio Internacional",
+      "otros_estudios": "Certificación en Visual Merchandising",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/monica_herrera.pdf",
+      "assessfirst": {
+        "compatibilidad": 84,
+        "descripcion": "Emprendedora y orientada a metas comerciales.",
+        "fortalezas": [
+          "Aperturas de tienda",
+          "Visual merchandising"
+        ],
+        "areas_oportunidad": [
+          "Seguimiento administrativo"
+        ],
+        "estilo_liderazgo": "Coach",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Pondera venta y experiencia del cliente",
+        "recomendaciones": "Avanzar a entrevista con el Hiring Manager."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 38,
+      "vacante_id": "VAC-113",
+      "nombre": "Andrea Villalobos",
+      "puesto_actual": "Data Engineer",
+      "empresa_actual": "Mercado Libre",
+      "resumen_profesional": "Ingeniera de datos con 5 años; migró pipelines de ventas a BigQuery y bajó 40 % el costo de procesamiento.",
+      "anos_experiencia": 5,
+      "compensacion_actual": 950000,
+      "compensacion_deseada": 1050000,
+      "escolaridad": "Ingeniería en Sistemas Computacionales",
+      "otros_estudios": "Google Cloud Professional Data Engineer",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "C1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/andrea_villalobos.pdf",
+      "assessfirst": {
+        "compatibilidad": 92,
+        "descripcion": "Analítica, rigurosa y con visión de arquitectura.",
+        "fortalezas": [
+          "Arquitectura de datos",
+          "Optimización de costos"
+        ],
+        "areas_oportunidad": [
+          "Comunicación con negocio"
+        ],
+        "estilo_liderazgo": "Técnico",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Basa sus decisiones en evidencia y pruebas",
+        "recomendaciones": "Avanzar a entrevista con el Hiring Manager."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 39,
+      "vacante_id": "VAC-113",
+      "nombre": "Emiliano Ortiz",
+      "puesto_actual": "Analytics Engineer",
+      "empresa_actual": "Walmart de México",
+      "resumen_profesional": "Analytics engineer con 4 años modelando datos de inventario y demanda para retail.",
+      "anos_experiencia": 4,
+      "compensacion_actual": 820000,
+      "compensacion_deseada": 980000,
+      "escolaridad": "Licenciatura en Actuaría",
+      "otros_estudios": "Especialidad en Ciencia de Datos",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/emiliano_ortiz.pdf",
+      "assessfirst": {
+        "compatibilidad": 86,
+        "descripcion": "Curioso y colaborativo, conecta datos con decisiones de negocio.",
+        "fortalezas": [
+          "Modelado de datos",
+          "SQL avanzado"
+        ],
+        "areas_oportunidad": [
+          "Infraestructura en la nube"
+        ],
+        "estilo_liderazgo": "Colaborativo",
+        "vision_estrategica": "Alta",
+        "toma_decisiones": "Prototipa antes de escalar",
+        "recomendaciones": "Validar experiencia en la nube."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 40,
+      "vacante_id": "VAC-113",
+      "nombre": "Paulina Treviño",
+      "puesto_actual": "Ingeniera de Software Backend",
+      "empresa_actual": "Banorte",
+      "resumen_profesional": "Backend con 6 años en Python; los últimos 2 construyendo procesos ETL en AWS.",
+      "anos_experiencia": 6,
+      "compensacion_actual": 900000,
+      "compensacion_deseada": 1200000,
+      "escolaridad": "Ingeniería en Computación",
+      "otros_estudios": "AWS Certified Data Analytics",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/paulina_trevino.pdf",
+      "assessfirst": {
+        "compatibilidad": 81,
+        "descripcion": "Resolutiva, con base sólida de software.",
+        "fortalezas": [
+          "Python",
+          "Automatización"
+        ],
+        "areas_oportunidad": [
+          "Conocimiento de retail"
+        ],
+        "estilo_liderazgo": "Técnico",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Prioriza la estabilidad del sistema",
+        "recomendaciones": "Revisar expectativa salarial: arriba del presupuesto."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 41,
+      "vacante_id": "VAC-114",
+      "nombre": "Sofía Cárdenas",
+      "puesto_actual": "Asistente de Compras",
+      "empresa_actual": "Grupo Axo",
+      "resumen_profesional": "Asistente de compras con 3 años en marcas de moda; negocia colecciones de temporada con proveedores.",
+      "anos_experiencia": 3,
+      "compensacion_actual": 330000,
+      "compensacion_deseada": 390000,
+      "escolaridad": "Licenciatura en Diseño de Modas",
+      "otros_estudios": "Diplomado en Compras de Retail",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/sofia_cardenas.pdf",
+      "assessfirst": {
+        "compatibilidad": 89,
+        "descripcion": "Creativa, con buen olfato comercial y de tendencias.",
+        "fortalezas": [
+          "Lectura de tendencias",
+          "Negociación"
+        ],
+        "areas_oportunidad": [
+          "Análisis de márgenes"
+        ],
+        "estilo_liderazgo": "Participativo",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Combina datos de venta con intuición de tendencia",
+        "recomendaciones": "Avanzar a entrevista con el Hiring Manager."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 42,
+      "vacante_id": "VAC-114",
+      "nombre": "Diego Montaño",
+      "puesto_actual": "Analista de Planeación",
+      "empresa_actual": "Innova Sport",
+      "resumen_profesional": "Analista de planeación con 2 años; lleva el surtido y la reposición de 40 tiendas.",
+      "anos_experiencia": 2,
+      "compensacion_actual": 300000,
+      "compensacion_deseada": 380000,
+      "escolaridad": "Licenciatura en Economía",
+      "otros_estudios": "Curso de Excel Avanzado y Power BI",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B1"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/diego_montano.pdf",
+      "assessfirst": {
+        "compatibilidad": 83,
+        "descripcion": "Metódico y orientado a números.",
+        "fortalezas": [
+          "Planeación de surtido",
+          "Excel avanzado"
+        ],
+        "areas_oportunidad": [
+          "Relación con proveedores"
+        ],
+        "estilo_liderazgo": "Analítico",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Decide con modelos de reposición",
+        "recomendaciones": "Validar su perfil comercial."
+      },
+      "status_proceso": "En Proceso",
+      "status_justificacion": "",
+      "enviado_hm": false,
+      "dias_esperando_hm": null,
+      "entrevistas": [],
+      "importado": false
+    },
+    {
+      "id": 43,
+      "vacante_id": "VAC-114",
+      "nombre": "Valeria Pineda",
+      "puesto_actual": "Merchandiser",
+      "empresa_actual": "Zara México",
+      "resumen_profesional": "Merchandiser con 3 años; ajusta exhibición y surtido según la venta semanal.",
+      "anos_experiencia": 3,
+      "compensacion_actual": 310000,
+      "compensacion_deseada": 360000,
+      "escolaridad": "Licenciatura en Mercadotecnia",
+      "otros_estudios": "Certificación en Visual Merchandising",
+      "idiomas": [
+        {
+          "idioma": "Inglés",
+          "nivel": "B2"
+        },
+        {
+          "idioma": "Español",
+          "nivel": "Nativo"
+        }
+      ],
+      "cv_path": "/cvs/valeria_pineda.pdf",
+      "assessfirst": {
+        "compatibilidad": 77,
+        "descripcion": "Detallista, con enfoque en la experiencia de compra.",
+        "fortalezas": [
+          "Visual merchandising",
+          "Análisis de sell-through"
+        ],
+        "areas_oportunidad": [
+          "Negociación con marcas"
+        ],
+        "estilo_liderazgo": "Coach",
+        "vision_estrategica": "Media",
+        "toma_decisiones": "Ajusta según la respuesta del cliente",
+        "recomendaciones": "Considerar si no avanzan los primeros perfiles."
       },
       "status_proceso": "En Proceso",
       "status_justificacion": "",
