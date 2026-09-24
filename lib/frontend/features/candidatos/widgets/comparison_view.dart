@@ -17,7 +17,8 @@ import 'decision_box.dart';
 import 'ui_kit.dart';
 
 /// Colores de los candidatos en el radar, en orden de selección.
-const radarColors = [AppColors.magenta, AppColors.purple, AppColors.orange, AppColors.info];
+/// Un color por candidato, bien distintos entre sí para leer el radar.
+const radarColors = [AppColors.flowDone, AppColors.info, AppColors.orange, AppColors.success];
 
 class ComparisonView extends ConsumerWidget {
   const ComparisonView({super.key, required this.state, required this.role});
@@ -63,9 +64,10 @@ class ComparisonView extends ConsumerWidget {
         children: [
           PanelTitle(
             'Comparativa lado a lado',
-            hint:
-                '${picked.length} candidatos de ${state.vacante.titulo}. Estructura del archivo de comparación; '
-                'el fondo verde marca el mejor valor.',
+            hint: state.cmpMode == CmpMode.tabla
+                ? '${picked.length} candidatos de ${state.vacante.titulo}. Estructura del archivo de comparación; '
+                      'el fondo verde marca el mejor valor.'
+                : '${picked.length} candidatos de ${state.vacante.titulo} en 6 ejes de 0 a 10.',
             trailing: Padding(
               padding: const EdgeInsets.only(left: 12),
               child: GlassSegmented<CmpMode>(
@@ -385,7 +387,7 @@ class _ComparisonTable extends StatelessWidget {
 // ---------------------------------------------------------------------------
 // Radar con los 6 ejes normalizados de 0 a 10.
 
-class _ComparisonRadar extends StatelessWidget {
+class _ComparisonRadar extends StatefulWidget {
   const _ComparisonRadar({required this.candidatos, required this.vacante, required this.role});
 
   final List<Candidato> candidatos;
@@ -393,7 +395,15 @@ class _ComparisonRadar extends StatelessWidget {
   final UserRole role;
 
   @override
+  State<_ComparisonRadar> createState() => _ComparisonRadarState();
+}
+
+class _ComparisonRadarState extends State<_ComparisonRadar> {
+  var _metodo = false;
+
+  @override
   Widget build(BuildContext context) {
+    final candidatos = widget.candidatos;
     RadarDataSet frame(double value) => RadarDataSet(
       dataEntries: [for (final _ in radarAxes) RadarEntry(value: value)],
       fillColor: Colors.transparent,
@@ -402,82 +412,96 @@ class _ComparisonRadar extends StatelessWidget {
       entryRadius: 0,
     );
 
-    final chart = SizedBox(
-      height: 420,
-      child: RadarChart(
-        RadarChartData(
-          radarShape: RadarShape.polygon,
-          tickCount: 5,
-          ticksTextStyle: const TextStyle(color: Colors.transparent, fontSize: 1),
-          tickBorderData: const BorderSide(color: CColors.line),
-          gridBorderData: const BorderSide(color: CColors.line),
-          radarBorderData: BorderSide(color: AppColors.ink.withValues(alpha: 0.15)),
-          titleTextStyle: AppTypography.caption.copyWith(color: AppColors.inkSoft, fontWeight: FontWeight.w600),
-          titlePositionPercentageOffset: 0.12,
-          getTitle: (index, _) => RadarChartTitle(text: radarAxes[index]),
-          radarTouchData: RadarTouchData(enabled: false),
-          dataSets: [
-            // Fijan la escala de 0 a 10 aunque ningún candidato llegue al máximo.
-            frame(10),
-            frame(0),
-            for (var i = 0; i < candidatos.length; i++)
-              RadarDataSet(
-                dataEntries: [for (final v in radarScore(candidatos[i], vacante)) RadarEntry(value: v)],
-                fillColor: radarColors[i].withValues(alpha: 0.16),
-                borderColor: radarColors[i],
-                borderWidth: 2.5,
-                entryRadius: 3,
-              ),
-          ],
+    // El margen deja lugar a las etiquetas de los ejes: fl_chart las dibuja
+    // fuera del polígono sin reservarles espacio.
+    final chart = Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 72, vertical: 28),
+      child: SizedBox(
+        height: 320,
+        child: RadarChart(
+          RadarChartData(
+            radarShape: RadarShape.polygon,
+            tickCount: 5,
+            ticksTextStyle: const TextStyle(color: Colors.transparent, fontSize: 1),
+            tickBorderData: const BorderSide(color: CColors.line),
+            gridBorderData: const BorderSide(color: CColors.line),
+            radarBorderData: BorderSide(color: AppColors.ink.withValues(alpha: 0.15)),
+            titleTextStyle: AppTypography.caption.copyWith(color: AppColors.inkSoft, fontWeight: FontWeight.w600),
+            titlePositionPercentageOffset: 0.22,
+            // Las etiquetas de varias palabras van en dos líneas para no encimarse.
+            getTitle: (index, _) => RadarChartTitle(text: radarAxes[index].replaceFirst(' ', '\n')),
+            radarTouchData: RadarTouchData(enabled: false),
+            dataSets: [
+              // Fijan la escala de 0 a 10 aunque ningún candidato llegue al máximo.
+              frame(10),
+              frame(0),
+              for (var i = 0; i < candidatos.length; i++)
+                RadarDataSet(
+                  dataEntries: [for (final v in radarScore(candidatos[i], widget.vacante)) RadarEntry(value: v)],
+                  // Relleno tenue para que los polígonos encimados se sigan distinguiendo.
+                  fillColor: radarColors[i].withValues(alpha: 0.06),
+                  borderColor: radarColors[i],
+                  borderWidth: 2,
+                  entryRadius: 3,
+                ),
+            ],
+          ),
         ),
       ),
     );
 
-    final legend = Wrap(
-      spacing: 14,
-      runSpacing: 6,
-      children: [
-        for (var i = 0; i < candidatos.length; i++)
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: 10,
-                height: 10,
-                decoration: BoxDecoration(color: radarColors[i], shape: BoxShape.circle),
-              ),
-              const SizedBox(width: 6),
-              Text(candidatos[i].nombre, style: AppTypography.caption.copyWith(color: AppColors.ink)),
-            ],
-          ),
-      ],
-    );
-
+    // La tabla es también la leyenda: cada fila lleva el color del candidato.
     final side = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Text(
-          'Cada eje va de 0 a 10. Compatibilidad es el % de AssessFirst entre 10; experiencia son los años (tope 10); '
-          'inglés convierte el nivel MCER (C1 = 8); liderazgo y visión traducen el estilo y el nivel a puntos; '
-          'ajuste a presupuesto es 10 si la compensación deseada cabe en la banda y baja conforme la excede.',
-          style: AppTypography.caption.copyWith(fontSize: 13.5, color: AppColors.inkMuted),
+        _RadarTable(candidatos: candidatos, vacante: widget.vacante, role: widget.role),
+        const SizedBox(height: 12),
+        TextButton.icon(
+          onPressed: () => setState(() => _metodo = !_metodo),
+          icon: AnimatedRotation(
+            turns: _metodo ? 0.25 : 0,
+            duration: const Duration(milliseconds: 200),
+            child: const Icon(Icons.chevron_right_rounded, size: 18),
+          ),
+          label: const Text('¿Cómo se calcula cada eje?'),
+          style: TextButton.styleFrom(
+            foregroundColor: AppColors.inkSoft,
+            padding: const EdgeInsets.symmetric(horizontal: 4),
+            textStyle: AppTypography.label.copyWith(fontWeight: FontWeight.w600),
+          ),
         ),
-        const SizedBox(height: 14),
-        _RadarTable(candidatos: candidatos, vacante: vacante, role: role),
+        AnimatedSize(
+          duration: const Duration(milliseconds: 220),
+          curve: Curves.easeOutCubic,
+          alignment: Alignment.topLeft,
+          child: !_metodo
+              ? const SizedBox(width: double.infinity)
+              : Padding(
+                  padding: const EdgeInsets.fromLTRB(6, 4, 6, 0),
+                  child: Text(
+                    'Cada eje va de 0 a 10. Compatibilidad es el % de AssessFirst entre 10; experiencia son los '
+                    'años (tope 10); inglés convierte el nivel MCER (C1 = 8); liderazgo y visión traducen el estilo '
+                    'y el nivel a puntos; ajuste a presupuesto es 10 si la compensación deseada cabe en la banda y '
+                    'baja conforme la excede.',
+                    style: AppTypography.caption.copyWith(fontSize: 13, color: AppColors.inkSoft, height: 1.45),
+                  ),
+                ),
+        ),
       ],
     );
 
     return LayoutBuilder(
-      builder: (context, box) => box.maxWidth >= 820
+      builder: (context, box) => box.maxWidth >= 900
           ? Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Expanded(child: Column(children: [chart, const SizedBox(height: 12), legend])),
+                Expanded(flex: 5, child: chart),
                 const SizedBox(width: 24),
-                Expanded(child: side),
+                Expanded(flex: 6, child: side),
               ],
             )
-          : Column(children: [chart, const SizedBox(height: 12), legend, const SizedBox(height: 20), side]),
+          : Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [chart, const SizedBox(height: 8), side]),
     );
   }
 }
@@ -508,7 +532,8 @@ class _RadarTable extends StatelessWidget {
       children: [
         TableRow(
           children: [
-            for (final h in ['Candidato', 'Fit', 'Liderazgo', 'Visión', 'Presupuesto']) pad(Text(h, style: head)),
+            for (final h in ['Candidato', 'Fit', 'Liderazgo', 'Visión', 'Presupuesto'])
+              pad(Text(h, style: head, maxLines: 1, overflow: TextOverflow.ellipsis)),
           ],
         ),
         for (var i = 0; i < candidatos.length; i++)
@@ -535,11 +560,11 @@ class _RadarTable extends StatelessWidget {
               pad(
                 isHm(role)
                     ? Text(formatMoneyShort(candidatos[i].compensacionDeseada), style: cell)
-                    : Align(
-                        alignment: Alignment.centerLeft,
-                        child: TonePill(
-                          label: budgetInfo(candidatos[i], vacante).text,
-                          tone: budgetInfo(candidatos[i], vacante).tone,
+                    : Text(
+                        budgetInfo(candidatos[i], vacante).text,
+                        style: cell.copyWith(
+                          color: toneColor(budgetInfo(candidatos[i], vacante).tone),
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
               ),

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_typography.dart';
 
-/// Control segmentado en pastilla de vidrio, estilo iOS.
+/// Control segmentado en pastilla de vidrio. La opción activa va sobre fondo
+/// blanco, igual que la opción activa del menú lateral.
 class GlassSegmented<T> extends StatelessWidget {
   const GlassSegmented({super.key, required this.segments, required this.selected, required this.onChanged});
 
@@ -33,20 +34,20 @@ class GlassSegmented<T> extends StatelessWidget {
                   curve: Curves.easeOut,
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
                   decoration: BoxDecoration(
-                    gradient: value == selected ? AppColors.brandGradientHorizontal : null,
+                    color: value == selected ? Colors.white : Colors.white.withValues(alpha: 0),
                     borderRadius: BorderRadius.circular(999),
                     boxShadow: value == selected
-                        ? [BoxShadow(color: AppColors.magenta.withValues(alpha: 0.3), blurRadius: 12, offset: const Offset(0, 4))]
+                        ? [BoxShadow(color: AppColors.purple.withValues(alpha: 0.10), blurRadius: 10, offset: const Offset(0, 3))]
                         : null,
                   ),
                   child: Row(
                     children: [
-                      Icon(icon, size: 16, color: value == selected ? Colors.white : AppColors.inkSoft),
+                      Icon(icon, size: 16, color: value == selected ? AppColors.flowDone : AppColors.inkSoft),
                       const SizedBox(width: 6),
                       Text(
                         label,
                         style: AppTypography.label.copyWith(
-                          color: value == selected ? Colors.white : AppColors.inkSoft,
+                          color: value == selected ? AppColors.ink : AppColors.inkSoft,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
