@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 
+import '../../features/workspace/workspace_style.dart';
+import '../../features/tutorial/spotlight.dart';
 import '../widgets/liquid_background.dart';
-import 'side_nav.dart';
+import '../widgets/toast_host.dart';
 import 'top_bar.dart';
 
-/// Estructura común: fondo líquido, menú lateral de vidrio y barra superior.
+/// Estructura común: fondo líquido y barra superior. La navegación vive
+/// dentro de cada módulo (vacantes y pestañas de Candidatos).
 class AppShell extends StatelessWidget {
-  const AppShell({super.key, required this.location, required this.child});
+  const AppShell({super.key, required this.child});
 
-  final String location;
   final Widget child;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: LiquidBackground(
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(20),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                SideNav(location: location),
-                const SizedBox(width: 24),
-                Expanded(
+        // El tutorial cubre toda la app, incluida la barra superior.
+        child: SpotlightHost(
+          child: WorkspaceSnackHost(
+            child: ToastHost(
+              child: SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
@@ -33,7 +33,7 @@ class AppShell extends StatelessWidget {
                     ],
                   ),
                 ),
-              ],
+              ),
             ),
           ),
         ),

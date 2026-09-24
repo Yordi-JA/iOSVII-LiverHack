@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pulso/backend/seed/seed_data.dart';
-import 'package:pulso/frontend/features/comparativa/hcai_scoring.dart';
+import 'package:puerta_liverpool/backend/seed/seed_data.dart';
+import 'package:puerta_liverpool/frontend/features/comparativa/hcai_scoring.dart';
 
 void main() {
   int banda(c) => seedVacancies.firstWhere((v) => v.id == c.vacanteId).bandaMax;

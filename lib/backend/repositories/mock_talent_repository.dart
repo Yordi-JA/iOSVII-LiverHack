@@ -2,9 +2,11 @@ import 'dart:async';
 
 import '../models/app_alert.dart';
 import '../models/candidate.dart';
+import '../models/hiring_record.dart';
 import '../models/person.dart';
 import '../models/vacancy.dart';
 import '../seed/seed_data.dart';
+import '../seed/seed_history.dart';
 import 'talent_repository.dart';
 
 /// Repositorio en memoria con los datos de prueba. Permite correr la demo
@@ -31,6 +33,9 @@ class MockTalentRepository implements TalentRepository {
 
   @override
   Stream<List<Person>> watchPeople() => Stream.value(seedPeople);
+
+  @override
+  Stream<List<HiringRecord>> watchHiringHistory() => Stream.value(generateHiringHistory());
 
   @override
   Future<void> moveCandidate(String candidateId, int etapa) async {

@@ -3,20 +3,21 @@ import 'package:go_router/go_router.dart';
 
 import '../core/layout/app_shell.dart';
 import '../features/candidate_profile/candidate_profile_page.dart';
+import '../features/candidatos/candidatos_page.dart';
 import '../features/comparativa/comparativa_page.dart';
-import '../features/dashboard/dashboard_page.dart';
 import '../features/procesos/procesos_page.dart';
 import '../features/shared/coming_soon_page.dart';
 
 NoTransitionPage<void> _page(Widget child) => NoTransitionPage(child: child);
 
 final appRouter = GoRouter(
-  initialLocation: '/',
+  initialLocation: '/candidatos',
   routes: [
     ShellRoute(
-      builder: (context, state, child) => AppShell(location: state.uri.path, child: child),
+      builder: (context, state, child) => AppShell(child: child),
       routes: [
-        GoRoute(path: '/', pageBuilder: (_, _) => _page(const DashboardPage())),
+        // Sin menú lateral, la app vive en Candidatos; la raíz redirige ahí.
+        GoRoute(path: '/', redirect: (_, _) => '/candidatos'),
         GoRoute(
           path: '/procesos',
           pageBuilder: (_, _) => _page(const ProcesosPage()),
@@ -27,14 +28,7 @@ final appRouter = GoRouter(
             ),
           ],
         ),
-        GoRoute(
-          path: '/candidatos',
-          pageBuilder: (_, _) => _page(const ComingSoonPage(
-            title: 'Candidatos',
-            description: 'Lista con perfil, visor de CV, compensación y AssessFirst.',
-            icon: Icons.people_alt_outlined,
-          )),
-        ),
+        GoRoute(path: '/candidatos', pageBuilder: (_, _) => _page(const CandidatosPage())),
         GoRoute(path: '/comparativa', pageBuilder: (_, _) => _page(const ComparativaPage())),
         GoRoute(
           path: '/entrevistas',

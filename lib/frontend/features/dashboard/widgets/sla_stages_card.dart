@@ -15,12 +15,15 @@ class SlaStagesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final scale = timings.fold<double>(1, (m, t) => [m, t.dias, t.sla].reduce((a, b) => a > b ? a : b)) * 1.15;
-    final bottleneck = timings.where((t) => t.sla > 0).fold<({PipelineStage stage, double dias, double sla})?>(
+    final bottleneck = timings
+        .where((t) => t.sla > 0)
+        .fold<({PipelineStage stage, double dias, double sla})?>(
           null,
           (worst, t) => worst == null || t.dias / t.sla > worst.dias / worst.sla ? t : worst,
         );
 
     return GlassCard(
+      radius: 22,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -35,15 +38,18 @@ class SlaStagesCard extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 6),
               child: Row(
                 children: [
-                  SizedBox(width: 90, child: Text(t.stage.label, style: AppTypography.label.copyWith(color: AppColors.inkSoft))),
+                  SizedBox(
+                    width: 90,
+                    child: Text(t.stage.label, style: AppTypography.label.copyWith(color: AppColors.inkSoft)),
+                  ),
                   Expanded(
                     child: LayoutBuilder(
                       builder: (context, box) {
                         final color = t.dias <= t.sla
                             ? AppColors.success
                             : t.dias <= t.sla * 1.3
-                                ? AppColors.warning
-                                : AppColors.danger;
+                            ? AppColors.warning
+                            : AppColors.danger;
                         return SizedBox(
                           height: 18,
                           child: Stack(

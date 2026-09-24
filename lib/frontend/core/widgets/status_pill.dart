@@ -25,9 +25,12 @@ class StatusPill extends StatelessWidget {
             Icon(icon, size: 13, color: color),
             const SizedBox(width: 4),
           ],
-          Text(
-            label,
-            style: AppTypography.caption.copyWith(color: color, fontWeight: FontWeight.w600),
+          // Flexible: en columnas angostas el texto baja de línea en vez de desbordarse.
+          Flexible(
+            child: Text(
+              label,
+              style: AppTypography.caption.copyWith(color: color, fontWeight: FontWeight.w600),
+            ),
           ),
         ],
       ),

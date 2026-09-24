@@ -1,7 +1,7 @@
 import '../models/candidate.dart';
 
 /// Los 10 candidatos de la base de datos proporcionada por Liverpool,
-/// más los campos de Pulso: vacante, etapa, puntaje AIRA y feedback por etapa.
+/// más los campos de Puerta Liverpool: vacante, etapa, puntaje AIRA y feedback por etapa.
 ///
 /// Distribución de la demo en el pipeline:
 /// - Etapa 5 (Selección): Ana, Sofia y Carlos (los 3 con historial de entrevistas).

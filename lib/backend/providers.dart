@@ -1,7 +1,9 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'candidatos/seed_repository.dart';
 import 'models/app_alert.dart';
 import 'models/candidate.dart';
+import 'models/hiring_record.dart';
 import 'models/person.dart';
 import 'models/vacancy.dart';
 import 'repositories/mock_talent_repository.dart';
@@ -30,3 +32,11 @@ final allCandidatesProvider = StreamProvider<List<Candidate>>(
 final candidatesByVacancyProvider = StreamProvider.family<List<Candidate>, String>(
   (ref, vacancyId) => ref.watch(talentRepositoryProvider).watchCandidates(vacancyId: vacancyId),
 );
+
+final hiringHistoryProvider = StreamProvider<List<HiringRecord>>(
+  (ref) => ref.watch(talentRepositoryProvider).watchHiringHistory(),
+);
+
+/// Persistencia del módulo de Candidatos. main.dart la sobrescribe con
+/// SharedPreferences; sin override (por ejemplo en tests) no guarda nada.
+final liverhackStoreProvider = Provider<LiverhackStore>((ref) => const LiverhackStore(null));

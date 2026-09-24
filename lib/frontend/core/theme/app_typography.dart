@@ -3,10 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'app_colors.dart';
 
-/// Tipografía estilo Apple (SF Pro). Inter es la alternativa libre más
-/// cercana; el tracking negativo en títulos imita a SF Display.
+/// Tipografía corporativa de Puerta Liverpool: Montserrat (geométrica y
+/// limpia), servida por google_fonts. Todos los estilos parten de [_base].
 abstract final class AppTypography {
-  static TextStyle get _base => GoogleFonts.inter(color: AppColors.ink);
+  static TextStyle get _base => GoogleFonts.montserrat(color: AppColors.ink);
 
   static TextStyle get display => _base.copyWith(
         fontSize: 30,
@@ -53,7 +53,8 @@ abstract final class AppTypography {
         height: 1,
       );
 
-  static TextTheme textTheme() => GoogleFonts.interTextTheme().apply(
+  /// Tema de texto global: los widgets sin estilo propio heredan Montserrat.
+  static TextTheme textTheme() => GoogleFonts.montserratTextTheme(ThemeData.light().textTheme).apply(
         bodyColor: AppColors.ink,
         displayColor: AppColors.ink,
       );

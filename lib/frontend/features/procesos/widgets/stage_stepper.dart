@@ -12,8 +12,10 @@ class StageStepper extends StatelessWidget {
     super.key,
     required this.currentStep,
     this.counts,
+    this.captions,
     this.highlightedStep,
     this.onStepTap,
+    this.showCaptions = true,
   });
 
   /// Etapa actual (1 a 6).
@@ -22,9 +24,15 @@ class StageStepper extends StatelessWidget {
   /// Candidatos por etapa. Si se indica, se muestra bajo cada etiqueta.
   final Map<int, int>? counts;
 
+  /// Texto bajo cada etapa (por ejemplo, días permitidos). Tiene prioridad sobre [counts].
+  final Map<int, String>? captions;
+
   /// Etapa cuyo feedback se está viendo.
   final int? highlightedStep;
   final ValueChanged<int>? onStepTap;
+
+  /// Si es `false`, bajo cada etapa solo va su nombre.
+  final bool showCaptions;
 
   static const _circleSize = 60.0;
   /// Ancho de cada paso. Los carriles de Procesos lo usan para alinear
@@ -58,6 +66,8 @@ class StageStepper extends StatelessWidget {
                   ? _StepState.active
                   : _StepState.pending,
           count: counts?[n],
+          caption: captions?[n],
+          showCaption: showCaptions,
           highlighted: highlightedStep == n,
           onTap: onStepTap == null ? null : () => onStepTap!(n),
         ),
@@ -82,10 +92,9 @@ class _Connector extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 4),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(4),
-        gradient: done ? AppColors.brandGradientHorizontal : null,
-        color: done ? null : AppColors.inkMuted.withValues(alpha: 0.3),
+        color: done ? AppColors.flowDone : AppColors.inkMuted.withValues(alpha: 0.3),
         boxShadow: done
-            ? [BoxShadow(color: AppColors.magenta.withValues(alpha: 0.3), blurRadius: 8)]
+            ? [BoxShadow(color: AppColors.flowDone.withValues(alpha: 0.3), blurRadius: 8)]
             : null,
       ),
     );
@@ -97,15 +106,19 @@ class _Step extends StatelessWidget {
     required this.stage,
     required this.state,
     required this.count,
+    required this.caption,
     required this.highlighted,
     required this.onTap,
+    required this.showCaption,
   });
 
   final PipelineStage stage;
   final _StepState state;
   final int? count;
+  final String? caption;
   final bool highlighted;
   final VoidCallback? onTap;
+  final bool showCaption;
 
   @override
   Widget build(BuildContext context) {
@@ -135,27 +148,19 @@ class _Step extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             highlighted ? GradientMask(child: label) : label,
-            const SizedBox(height: 2),
-            // Alto fijo para que el flujo no cambie de tamaño entre modos.
-            SizedBox(
-              height: 30,
-              child: Text(
-                count == null ? stage.description : '$count candidato${count == 1 ? '' : 's'}',
-                textAlign: TextAlign.center,
-                maxLines: 2,
-                style: AppTypography.caption.copyWith(fontSize: 11),
+            if (showCaption) ...[
+              const SizedBox(height: 2),
+              // Alto fijo para que el flujo no cambie de tamaño entre modos.
+              SizedBox(
+                height: 30,
+                child: Text(
+                  caption ?? (count == null ? stage.description : '$count candidato${count == 1 ? '' : 's'}'),
+                  textAlign: TextAlign.center,
+                  maxLines: 2,
+                  style: AppTypography.caption.copyWith(fontSize: 11),
+                ),
               ),
-            ),
-            const SizedBox(height: 6),
-            AnimatedContainer(
-              duration: const Duration(milliseconds: 250),
-              width: highlighted ? 22 : 0,
-              height: 4,
-              decoration: BoxDecoration(
-                gradient: AppColors.brandGradientHorizontal,
-                borderRadius: BorderRadius.circular(4),
-              ),
-            ),
+            ],
           ],
         ),
       ),
@@ -176,11 +181,11 @@ class _DoneCircle extends StatelessWidget {
       height: 48,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        gradient: AppColors.brandGradient,
+        color: AppColors.flowDone,
         border: Border.all(color: Colors.white, width: highlighted ? 3 : 0),
         boxShadow: [
           BoxShadow(
-            color: AppColors.purple.withValues(alpha: highlighted ? 0.45 : 0.25),
+            color: AppColors.flowDone.withValues(alpha: highlighted ? 0.45 : 0.25),
             blurRadius: highlighted ? 18 : 10,
             offset: const Offset(0, 4),
           ),
@@ -224,10 +229,12 @@ class _ActiveCircleState extends State<_ActiveCircle> with SingleTickerProviderS
             shape: BoxShape.circle,
             color: Colors.white,
             boxShadow: [
+              // Halo rosa de 6 px al 20% que "respira".
+              BoxShadow(color: AppColors.flowCurrent.withValues(alpha: 0.2), spreadRadius: 6),
               BoxShadow(
-                color: AppColors.magenta.withValues(alpha: 0.25 + 0.25 * t),
-                blurRadius: 16 + 14 * t,
-                spreadRadius: 1 + 3 * t,
+                color: AppColors.flowCurrent.withValues(alpha: 0.15 + 0.2 * t),
+                blurRadius: 12 + 12 * t,
+                spreadRadius: 6 + 2 * t,
               ),
             ],
           ),
@@ -236,7 +243,7 @@ class _ActiveCircleState extends State<_ActiveCircle> with SingleTickerProviderS
         );
       },
       child: Container(
-        decoration: const BoxDecoration(shape: BoxShape.circle, gradient: AppColors.brandGradient),
+        decoration: const BoxDecoration(shape: BoxShape.circle, color: AppColors.flowCurrent),
         alignment: Alignment.center,
         child: Text(
           '${widget.number}',

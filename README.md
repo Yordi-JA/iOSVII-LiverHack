@@ -1,4 +1,4 @@
-# Pulso · LiverHack 2026
+# Puerta Liverpool · LiverHack 2026
 
 Plataforma de atracción de talento para El Puerto de Liverpool: flujo de 6 etapas con semáforo de SLA,
 pipeline visual de candidatos filtrados por AIRA, feedback por etapa y dashboard de RH.

@@ -1,13 +1,22 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../backend/models/person.dart';
+import '../../../backend/providers.dart';
 
 /// Rol activo en la demo. Reemplaza al login para cambiar de vista rápido.
+/// Se guarda para que sobreviva a una recarga.
 class CurrentRoleNotifier extends Notifier<UserRole> {
   @override
-  UserRole build() => UserRole.reclutador;
+  UserRole build() {
+    final saved = ref.read(liverhackStoreProvider).role;
+    return UserRole.values.where((r) => r.name == saved).firstOrNull ?? UserRole.reclutador;
+  }
 
-  void select(UserRole role) => state = role;
+  void select(UserRole role) {
+    if (role == state) return;
+    state = role;
+    ref.read(liverhackStoreProvider).role = role.name;
+  }
 }
 
 final currentRoleProvider = NotifierProvider<CurrentRoleNotifier, UserRole>(CurrentRoleNotifier.new);

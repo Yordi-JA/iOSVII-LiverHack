@@ -10,12 +10,16 @@ class GradientButton extends StatelessWidget {
     required this.onTap,
     this.icon = Icons.arrow_forward_rounded,
     this.enabled = true,
+    this.large = false,
   });
 
   final String label;
   final VoidCallback onTap;
   final IconData? icon;
   final bool enabled;
+
+  /// Versión grande para la acción principal de una pantalla.
+  final bool large;
 
   @override
   Widget build(BuildContext context) {
@@ -26,24 +30,39 @@ class GradientButton extends StatelessWidget {
         child: Ink(
           decoration: BoxDecoration(
             gradient: AppColors.brandGradientHorizontal,
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(large ? 20 : 14),
             boxShadow: [
-              BoxShadow(color: AppColors.magenta.withValues(alpha: 0.3), blurRadius: 14, offset: const Offset(0, 6)),
+              BoxShadow(
+                color: AppColors.magenta.withValues(alpha: large ? 0.38 : 0.3),
+                blurRadius: large ? 24 : 14,
+                offset: Offset(0, large ? 10 : 6),
+              ),
             ],
           ),
           child: InkWell(
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(large ? 20 : 14),
             onTap: enabled ? onTap : null,
             child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 20),
+              padding: large
+                  ? const EdgeInsets.symmetric(vertical: 22, horizontal: 28)
+                  : const EdgeInsets.symmetric(vertical: 13, horizontal: 20),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(label, style: AppTypography.label.copyWith(color: Colors.white, fontWeight: FontWeight.w600)),
+                  Flexible(
+                    child: Text(
+                      label,
+                      textAlign: TextAlign.center,
+                      style: (large ? AppTypography.title : AppTypography.label).copyWith(
+                        color: Colors.white,
+                        fontWeight: large ? FontWeight.w700 : FontWeight.w600,
+                      ),
+                    ),
+                  ),
                   if (icon != null) ...[
-                    const SizedBox(width: 6),
-                    Icon(icon, color: Colors.white, size: 18),
+                    SizedBox(width: large ? 10 : 6),
+                    Icon(icon, color: Colors.white, size: large ? 24 : 18),
                   ],
                 ],
               ),

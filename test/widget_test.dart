@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pulso/backend/seed/seed_data.dart';
-import 'package:pulso/frontend/features/dashboard/dashboard_metrics.dart';
+import 'package:puerta_liverpool/backend/seed/seed_data.dart';
+import 'package:puerta_liverpool/frontend/features/dashboard/dashboard_metrics.dart';
 
 void main() {
   test('el embudo refleja la distribución de la demo', () {

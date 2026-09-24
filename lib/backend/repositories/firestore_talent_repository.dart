@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../models/app_alert.dart';
 import '../models/candidate.dart';
+import '../models/hiring_record.dart';
 import '../models/person.dart';
 import '../models/vacancy.dart';
 import 'talent_repository.dart';
@@ -39,6 +40,12 @@ class FirestoreTalentRepository implements TalentRepository {
       .collection('users')
       .snapshots()
       .map((s) => s.docs.map((d) => Person.fromMap(d.id, d.data())).toList());
+
+  @override
+  Stream<List<HiringRecord>> watchHiringHistory() => _db
+      .collection('historial_vacantes')
+      .snapshots()
+      .map((s) => s.docs.map((d) => HiringRecord.fromMap(d.id, d.data())).toList());
 
   @override
   Future<void> moveCandidate(String candidateId, int etapa) async {

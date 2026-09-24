@@ -20,6 +20,7 @@ class FunnelCard extends StatelessWidget {
     final conversion = first == 0 ? 0 : (funnel[5] ?? 0) / first * 100;
 
     return GlassCard(
+      radius: 22,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -34,7 +35,10 @@ class FunnelCard extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: 110,
-                    child: Text('${s.number}  ${s.label}', style: AppTypography.label.copyWith(color: AppColors.inkSoft)),
+                    child: Text(
+                      '${s.number}  ${s.label}',
+                      style: AppTypography.label.copyWith(color: AppColors.inkSoft),
+                    ),
                   ),
                   Expanded(
                     child: LayoutBuilder(
@@ -48,11 +52,10 @@ class FunnelCard extends StatelessWidget {
                             curve: Curves.easeOutCubic,
                             builder: (context, w, _) => Container(
                               width: w,
-                              height: 26,
+                              height: 22,
                               decoration: BoxDecoration(
-                                gradient: value == 0 ? null : AppColors.brandGradientHorizontal,
-                                color: value == 0 ? AppColors.ink.withValues(alpha: 0.08) : null,
-                                borderRadius: BorderRadius.circular(10),
+                                color: value == 0 ? AppColors.ink.withValues(alpha: 0.08) : AppColors.flowDone,
+                                borderRadius: BorderRadius.circular(6),
                               ),
                             ),
                           ),
@@ -65,7 +68,7 @@ class FunnelCard extends StatelessWidget {
                     child: Text(
                       '${funnel[s.number] ?? 0}',
                       textAlign: TextAlign.right,
-                      style: AppTypography.label.copyWith(fontWeight: FontWeight.w700),
+                      style: AppTypography.label.copyWith(fontWeight: FontWeight.w600),
                     ),
                   ),
                 ],

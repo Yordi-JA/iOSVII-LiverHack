@@ -10,6 +10,16 @@ String formatMoney(num value) {
   return '\$${(value / 1000).round()}k';
 }
 
+/// Como [formatMoney] pero con hasta dos decimales sin ceros sobrantes:
+/// 1250000 → $1.25M, 1200000 → $1.2M, 950000 → $950k.
+String formatMoneyShort(num value) {
+  if (value >= 1000000) {
+    final text = (value / 1000000).toStringAsFixed(2).replaceFirst(RegExp(r'\.?0+$'), '');
+    return '\$${text}M';
+  }
+  return '\$${(value / 1000).round()}k';
+}
+
 String initialsOf(String name) {
   final parts = name.trim().split(RegExp(r'\s+'));
   return parts.take(2).map((p) => p.isEmpty ? '' : p[0].toUpperCase()).join();

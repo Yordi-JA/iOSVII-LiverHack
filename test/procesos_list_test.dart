@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pulso/backend/providers.dart';
-import 'package:pulso/frontend/features/procesos/procesos_controller.dart';
-import 'package:pulso/frontend/features/procesos/procesos_page.dart';
+import 'package:puerta_liverpool/backend/providers.dart';
+import 'package:puerta_liverpool/frontend/features/procesos/procesos_controller.dart';
+import 'package:puerta_liverpool/frontend/features/procesos/procesos_page.dart';
 
 void main() {
   setUpAll(() => GoogleFonts.config.allowRuntimeFetching = false);

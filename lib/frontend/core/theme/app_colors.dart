@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
-/// Paleta de Pulso inspirada en El Puerto de Liverpool:
+/// Paleta de Puerta Liverpool inspirada en El Puerto de Liverpool:
 /// morado → rosa Liverpool → naranja.
 abstract final class AppColors {
   static const purple = Color(0xFF6B2BD9);
   static const magenta = Color(0xFFE10098);
   static const orange = Color(0xFFFF7A1A);
+
+  /// Flujo de 6 etapas: morado para las completadas y rosa Liverpool
+  /// para la actual.
+  static const flowDone = Color(0xFF702F8A);
+  static const flowCurrent = magenta;
 
   static const ink = Color(0xFF1C1B2E);
   static const inkSoft = Color(0xFF6B6A80);
