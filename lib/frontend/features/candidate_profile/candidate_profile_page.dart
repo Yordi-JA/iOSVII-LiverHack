@@ -12,6 +12,7 @@ import '../../../backend/providers.dart';
 import '../comparativa/comparativa_controller.dart';
 import '../comparativa/hcai_scoring.dart';
 import '../procesos/widgets/stage_feedback_card.dart';
+import '../candidatos/widgets/ui_kit.dart' show ToneButton;
 import '../procesos/widgets/stage_stepper.dart';
 import 'widgets/contact_card.dart';
 import 'widgets/hcai_breakdown_card.dart';
@@ -67,10 +68,11 @@ class _CandidateProfilePageState extends ConsumerState<CandidateProfilePage> {
               const Spacer(),
               GlassOutlineButton(label: 'Ver CV', icon: Icons.picture_as_pdf_outlined, onTap: () {}),
               const SizedBox(width: 10),
-              GradientButton(
+              ToneButton(
                 label: 'Avanzar etapa',
-                enabled: canAdvance,
-                onTap: () {
+                icon: Icons.arrow_forward_rounded,
+                color: AppColors.flowDone,
+                onTap: !canAdvance ? null : () {
                   ref.read(talentRepositoryProvider).moveCandidate(c.id, c.etapaActual + 1);
                   setState(() => _stage = c.etapaActual + 1);
                 },

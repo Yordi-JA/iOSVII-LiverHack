@@ -9,7 +9,6 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_typography.dart';
 import '../../../core/utils/formatters.dart';
 import '../../../core/widgets/glass_card.dart';
-import '../../../core/widgets/gradient_button.dart';
 import '../../../core/widgets/status_pill.dart';
 import '../candidatos_controller.dart';
 import 'ui_kit.dart';
@@ -159,9 +158,10 @@ class _RequisicionCard extends ConsumerWidget {
           ),
           const SizedBox(height: 22),
           cierre ??
-              GradientButton(
+              ToneButton(
                 label: 'Validar posición y aprobar presupuesto',
                 icon: Icons.verified_rounded,
+                color: AppColors.flowDone,
                 onTap: () => ref.read(candidatosProvider.notifier).avanzarEtapaVacante(v.id, 2),
               ),
         ],
@@ -289,10 +289,10 @@ class _AlineacionCard extends ConsumerWidget {
           if (cierre == null)
           LayoutBuilder(
             builder: (context, box) {
-              final aprobar = GradientButton(
+              final aprobar = ToneButton(
                 label: 'Aprobar Alineación',
                 icon: Icons.handshake_rounded,
-                large: true,
+                color: AppColors.flowDone,
                 onTap: () => ref.read(candidatosProvider.notifier).avanzarEtapaVacante(v.id, 3),
               );
               final editar = OutlinedButton.icon(
@@ -435,7 +435,7 @@ class _EditarPerfilDialogState extends State<_EditarPerfilDialog> {
       actionsPadding: const EdgeInsets.fromLTRB(24, 0, 24, 20),
       actions: [
         TextButton(onPressed: () => Navigator.of(context).pop(), child: const Text('Cancelar')),
-        GradientButton(label: 'Guardar cambios', icon: Icons.check_rounded, onTap: _guardar),
+        ToneButton(label: 'Guardar cambios', icon: Icons.check_rounded, color: AppColors.flowDone, onTap: _guardar),
       ],
     );
   }
@@ -506,10 +506,11 @@ class _BusquedaCardState extends ConsumerState<_BusquedaCard> {
                             Text('Consultando Aira…', style: AppTypography.label),
                           ],
                         )
-                      : GradientButton(
+                      : ToneButton(
                           key: const ValueKey('boton'),
                           label: 'Importar candidatos desde ATS (Aira)',
                           icon: Icons.cloud_download_rounded,
+                          color: AppColors.flowDone,
                           onTap: _importar,
                         ),
                 ),

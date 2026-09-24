@@ -10,7 +10,6 @@ import '../../../core/theme/app_typography.dart';
 import '../../../core/utils/formatters.dart';
 import '../../../core/widgets/glass_card.dart';
 import '../../../core/widgets/glass_segmented.dart';
-import '../../../core/widgets/gradient_button.dart';
 import '../../../core/widgets/status_pill.dart';
 import '../candidatos_controller.dart';
 import 'cv_viewer.dart';
@@ -44,9 +43,10 @@ class ComparisonView extends ConsumerWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 14),
-              GradientButton(
+              ToneButton(
                 label: 'Ir a la lista de candidatos',
                 icon: Icons.arrow_back_rounded,
+                color: AppColors.flowDone,
                 onTap: () => notifier.setView(CandidatosView.lista),
               ),
             ],

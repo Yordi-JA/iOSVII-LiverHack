@@ -7,7 +7,6 @@ import '../../../../backend/models/person.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_typography.dart';
 import '../../../core/utils/formatters.dart';
-import '../../../core/widgets/gradient_button.dart';
 import '../../../core/widgets/status_pill.dart';
 import '../../workspace/workspace_hub.dart';
 import '../candidatos_controller.dart';
@@ -140,9 +139,10 @@ class CandidateDetail extends ConsumerWidget {
             runSpacing: 8,
             children: [
               if (!c.enviadoHm && c.status == StatusProceso.enProceso)
-                GradientButton(
+                ToneButton(
                   label: 'Enviar a ${vacante.hiringManager}',
                   icon: Icons.send_rounded,
+                  color: AppColors.flowDone,
                   onTap: () => notifier.enviarAHm(c.id),
                 ),
               ToneButton(
